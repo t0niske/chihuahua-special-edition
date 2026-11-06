@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chihuahua Special Edition</title>
+<meta name="description" content="История, характер, интересные факты, образы и советы владельцам чихуахуа — лендинг в стиле модного журнала.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@700;800;900&family=Anton&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Компактное меню, появляется после обложки -->
+<div class="minibar" id="minibar" aria-hidden="true">
+  <a href="#top" class="minibar__logo">CHIHUAHUA</a>
+  <nav class="minibar__nav">
+    <a href="#history">История</a><a href="#character">Характер</a><a href="#facts">Факты</a><a href="#look">Look of the day</a><a href="#tips">Советы</a>
+  </nav>
+</div>
+
+<!-- ============ ОБЛОЖКА ============ -->
+<header class="cover board" id="top">
+  <nav class="nav" aria-label="Разделы">
+    <a href="#history">История</a><i></i>
+    <a href="#character">Характер</a><i></i>
+    <a href="#facts">Интересные факты</a><i></i>
+    <a href="#look">Look of the day</a><i></i>
+    <a href="#tips">Советы для родителей</a>
+  </nav>
+
+  <h1 class="cover__title">
+    <svg viewBox="0 0 1795 360" role="img" aria-label="Chihuahua">
+      <text x="0" y="360" textLength="1795" lengthAdjust="spacingAndGlyphs">CHIHUAHUA</text>
+    </svg>
+  </h1>
+  <p class="cover__edition">Special Edition</p>
+  <p class="cover__year">2025 год</p>
+
+  <img class="cover__dog" src="assets/cover-dog.webp" width="1120" height="1076"
+       alt="Чихуахуа в больших чёрных очках и жемчужном ожерелье">
+
+  <a class="cl cl--top" href="#facts"><b class="d">Входит в топ</b><span>Самых популярных<br>пород собак в&nbsp;мире</span></a>
+  <a class="cl cl--boss" href="#character"><span class="caps">Играем<br>по правилам<br>мини-босса</span></a>
+  <a class="cl cl--model" href="#look"><b class="d">Крошечная модель<br>для большого впечатления</b></a>
+  <a class="cl cl--energy" href="#character"><span class="caps">Энергия обаяния<br class="dt"> и притягательности</span></a>
+  <a class="cl cl--ways" href="#tips"><b class="d">10 способов</b><span>Заслужить прощение<br>за 5-секундный уход</span></a>
+  <a class="cl cl--size" href="#look"><span class="tag">Размер XS — стиль XXL</span></a>
+
+  <div class="barcode" aria-hidden="true"><span class="barcode__bars"></span><span>Роскошный максимум</span></div>
+
+  <svg class="star" style="--x:65;--y:105;--s:44" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1880;--y:118;--s:44" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:220;--y:565;--s:34" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1932;--y:532;--s:38" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star star--big" style="--x:55;--y:990;--s:86" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star star--big" style="--x:1860;--y:895;--s:86" aria-hidden="true"><use href="#star"/></svg>
+</header>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker__track">
+    <span>Размер XS — стиль XXL</span><span>✦</span><span>Special Edition 2025</span><span>✦</span><span>Большое сердце в формате XS</span><span>✦</span><span>Мексика · Чиуауа</span><span>✦</span>
+    <span>Размер XS — стиль XXL</span><span>✦</span><span>Special Edition 2025</span><span>✦</span><span>Большое сердце в формате XS</span><span>✦</span><span>Мексика · Чиуауа</span><span>✦</span>
+  </div>
+</div>
+
+<main>
+
+<!-- ============ ИСТОРИЯ ============ -->
+<section class="history board" id="history" aria-labelledby="history-title">
+  <h2 class="history__title d" id="history-title">Древние&nbsp; корни</h2>
+  <img class="asset history__sombrero" src="assets/sombrero.png" data-ph="" alt="">
+
+  <p class="history__p1 txt reveal">Задолго до появления современной породы рядом с&nbsp;народами тольтеков и&nbsp;майя жили маленькие собачки техичи&nbsp;— именно они считаются прямыми предками чихуахуа</p>
+  <img class="asset history__figure reveal" src="assets/techichi.png" data-ph="фигурка техичи" alt="Древняя глиняная фигурка собаки">
+  <img class="asset history__flag reveal" src="assets/flag.png" data-ph="флаг Мексики" alt="Флаг Мексики">
+  <img class="asset history__maracas" src="assets/maracas.png" data-ph="" alt="">
+  <p class="history__p2 txt reveal">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;врождённая связь с&nbsp;человеком</p>
+
+  <div class="history__xix reveal">
+    <h3 class="d">В XIX веке...</h3>
+    <p class="txt">Породу вновь открыли в&nbsp;мексиканском штате Чиуауа, откуда началось её стремительное покорение мира.</p>
+  </div>
+
+  <img class="asset history__cactus" src="assets/cactus.png" data-ph="" alt="">
+  <img class="asset history__cactus history__cactus--2" src="assets/cactus-2.png" data-ph="" alt="">
+  <figure class="history__map">
+    <img class="asset" src="assets/map.webp" data-ph="карта Мексики со штатом Чиуауа" alt="Карта Мексики, штат Чиуауа выделен красным">
+  </figure>
+  <p class="history__quote reveal">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и связь с человеком</p>
+</section>
+
+<!-- ============ ХАРАКТЕР ============ -->
+<section class="character board" id="character" aria-labelledby="character-title">
+  <div class="character__head">
+    <h2 class="character__title d" id="character-title">Характер</h2>
+    <p class="character__sub d">который покоряет</p>
+  </div>
+  <img class="character__paw" src="assets/paw.webp" width="1014" height="640" alt="Лапка чихуахуа крупным планом">
+
+  <blockquote class="character__quote reveal">
+    <span class="d">Большое сердце<br>в формате <em>XS</em></span>
+  </blockquote>
+
+  <ol class="traits">
+    <li class="trait reveal"><span class="trait__n">01</span><h3 class="d">Преданность</h3><p>Чихуахуа выбирает «своего» человека и&nbsp;следует за ним тенью: из комнаты в&nbsp;комнату, с&nbsp;дивана на колени.</p></li>
+    <li class="trait reveal"><span class="trait__n">02</span><h3 class="d">Смелость</h3><p>О&nbsp;своём размере эта собака не догадывается. Готова встать на защиту хозяина перед кем угодно&nbsp;— хоть перед догом.</p></li>
+    <li class="trait reveal"><span class="trait__n">03</span><h3 class="d">Ум</h3><p>Быстро считывает интонацию и&nbsp;настроение, легко учит команды&nbsp;— особенно если за них полагается похвала и&nbsp;лакомство.</p></li>
+    <li class="trait reveal"><span class="trait__n">04</span><h3 class="d">Бдительность</h3><p>Живой дверной звонок: сообщит о&nbsp;каждом шорохе на лестнице. С&nbsp;незнакомцами держится настороженно.</p></li>
+    <li class="trait reveal"><span class="trait__n">05</span><h3 class="d">Теплолюбивость</h3><p>Маленькое тело быстро теряет тепло, поэтому лучшие места в&nbsp;доме&nbsp;— плед, солнечный подоконник и&nbsp;ваши колени.</p></li>
+  </ol>
+
+  <svg class="star" style="--x:860;--y:300;--s:40" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star star--big" style="--x:1870;--y:760;--s:80" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ============ ИНТЕРЕСНЫЕ ФАКТЫ ============ -->
+<section class="facts" id="facts" aria-labelledby="facts-title">
+  <div class="facts__head">
+    <h2 class="facts__title d" id="facts-title">Интересные<br>факты</h2>
+    <p class="facts__lead caps">10 причин, почему<br>маленькая собака&nbsp;— большая звезда</p>
+  </div>
+  <ol class="facts__grid">
+    <li class="fact fact--wide reveal"><span class="fact__n d">01</span><p><b>Самая маленькая порода в&nbsp;мире.</b> По стандарту взрослая чихуахуа весит от&nbsp;1,5 до&nbsp;3&nbsp;кг.</p></li>
+    <li class="fact fact--red reveal"><span class="fact__n d">02</span><p><b>9,14&nbsp;см в&nbsp;холке</b>&nbsp;— рост чихуахуа Перл, которую в&nbsp;2023 году Книга рекордов Гиннесса признала самой маленькой собакой в&nbsp;мире.</p></li>
+    <li class="fact reveal"><span class="fact__n d">03</span><p>Порода названа в&nbsp;честь <b>мексиканского штата Чиуауа</b>&nbsp;— там её и&nbsp;нашли в&nbsp;XIX веке.</p></li>
+    <li class="fact reveal"><span class="fact__n d">04</span><p><b>Две версии одной породы:</b> гладкошёрстная и&nbsp;длинношёрстная. Иногда в&nbsp;одном помёте рождаются обе.</p></li>
+    <li class="fact reveal"><span class="fact__n d">05</span><p>У&nbsp;многих чихуахуа есть <b>молера</b>&nbsp;— мягкий родничок на макушке, как у&nbsp;младенца.</p></li>
+    <li class="fact fact--wide reveal"><span class="fact__n d">06</span><p><b>Первая чихуахуа в&nbsp;реестре.</b> В&nbsp;1904 году Американский клуб собаководства зарегистрировал первого представителя породы&nbsp;— пса по кличке Миджет.</p></li>
+    <li class="fact reveal"><span class="fact__n d">07</span><p><b>Почти любой окрас</b> допустим стандартом: от&nbsp;кремового и&nbsp;рыжего до&nbsp;чёрного и&nbsp;пятнистого.</p></li>
+    <li class="fact reveal"><span class="fact__n d">08</span><p><b>Долгожители:</b> чихуахуа живут в&nbsp;среднем 14–16 лет, а&nbsp;многие&nbsp;— заметно дольше.</p></li>
+    <li class="fact fact--dark reveal"><span class="fact__n d">09</span><p><b>Звёзды экрана:</b> Брюзер из «Блондинки в&nbsp;законе», «Крошка из Беверли-Хиллз» и&nbsp;знаменитая собачка из рекламы Taco Bell.</p></li>
+    <li class="fact reveal"><span class="fact__n d">10</span><p><b>Дрожь&nbsp;— не всегда страх.</b> Чихуахуа дрожат от&nbsp;холода и&nbsp;от&nbsp;волнения: так крошечное тело согревается и&nbsp;сбрасывает эмоции.</p></li>
+  </ol>
+</section>
+
+<!-- ============ LOOK OF THE DAY (слайдер) ============ -->
+<section class="look board" id="look" aria-labelledby="look-title" aria-roledescription="карусель">
+  <h2 class="look__title" id="look-title"><span class="look__t1 d">Look of</span> <span class="look__t2 d">the day</span></h2>
+  <img class="asset look__glasses-mini" src="assets/look-glasses-mini.png" data-ph="" alt="">
+
+  <!-- постоянные предметы -->
+  <img class="asset look__item" style="--x:1515;--y:20;--w:365;--r:12deg" src="assets/item-sunglasses.png" data-ph="" alt="">
+  <img class="asset look__item" style="--x:1385;--y:55;--w:150;--r:-14deg" src="assets/item-coffee.png" data-ph="" alt="">
+  <img class="asset look__item" style="--x:1570;--y:170;--w:165;--r:-12deg" src="assets/item-tote.png" data-ph="" alt="">
+  <img class="asset look__item" style="--x:45;--y:383;--w:72" src="assets/item-ball.png" data-ph="" alt="">
+  <img class="asset look__item" style="--x:245;--y:345;--w:120;--r:28deg" src="assets/item-bone.png" data-ph="" alt="">
+  <img class="asset look__item" style="--x:125;--y:470;--w:125;--r:-18deg" src="assets/item-collar.png" data-ph="" alt="">
+
+  <div class="look__text">
+    <h3 class="d">Твой пушистый модник<br>заслуживает лучшего!</h3>
+    <p>Все просто! Листай подборку «Look of the day», вдохновляйся и&nbsp;выбирай образ, который идеально подходит настроению твоего питомца</p>
+    <p>Просто выбери, кликни, и&nbsp;пусть твоя собачка сияет!</p>
+  </div>
+
+  <div class="look__stage" id="lookStage" aria-live="polite">
+    <figure class="look__slide is-active" data-label="">
+      <img class="asset look__dog" src="assets/look-1.webp" data-ph="собака · базовый образ" alt="Чихуахуа без одежды стоит на газоне">
+    </figure>
+    <figure class="look__slide" data-label="Тяжёлый люкс" data-outfit="assets/outfit-lux.png">
+      <img class="asset look__dog" src="assets/look-2.webp" data-ph="собака · «Тяжёлый люкс»" alt="Чихуахуа в очках, шлейке и с сумкой-переноской с монограммой">
+    </figure>
+    <figure class="look__slide" data-label="Clean dog" data-outfit="assets/outfit-clean.png">
+      <img class="asset look__dog" src="assets/look-3.webp" data-ph="собака · «Clean dog»" alt="Чихуахуа в вязаной шапке, жилете и белых ботиночках">
+    </figure>
+    <figure class="look__slide" data-label="Barbiecore крошка" data-outfit="assets/outfit-barbie.png">
+      <img class="asset look__dog" src="assets/look-4.webp" data-ph="собака · «Barbiecore крошка»" alt="Чихуахуа в розовом платье с пайетками и бантом">
+    </figure>
+    <figure class="look__slide" data-label="Осенний латте" data-outfit="assets/outfit-latte.png">
+      <img class="asset look__dog" src="assets/look-5.webp" data-ph="собака · «Осенний латте»" alt="Чихуахуа в коричневом свитере и вязаных носочках">
+    </figure>
+
+    <button class="look__side look__side--l" id="lookSideL" aria-label="Предыдущий образ" hidden><img alt=""></button>
+    <button class="look__side look__side--r" id="lookSideR" aria-label="Следующий образ" hidden><img alt=""></button>
+    <button class="look__arrow look__arrow--prev" id="lookPrev" aria-label="Предыдущий образ">
+      <svg viewBox="0 0 76 46"><path d="M74 23H4M24 3 4 23l20 20" /></svg>
+    </button>
+    <button class="look__arrow look__arrow--next" id="lookNext" aria-label="Следующий образ">
+      <svg viewBox="0 0 76 46"><path d="M2 23h70M52 3l20 20-20 20" /></svg>
+    </button>
+  </div>
+
+  <div class="look__grass" aria-hidden="true"></div>
+  <p class="look__label" id="lookLabel" aria-live="polite"></p>
+  <p class="look__count" id="lookCount">01 / 05</p>
+
+
+  <svg class="star" style="--x:745;--y:92;--s:32" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:626;--y:348;--s:32" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:196;--y:417;--s:32" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star star--big" style="--x:365;--y:550;--s:66" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1283;--y:223;--s:32" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star star--big" style="--x:1942;--y:577;--s:66" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ============ СОВЕТЫ ============ -->
+<section class="tips" id="tips" aria-labelledby="tips-title">
+  <div class="tips__head">
+    <h2 class="tips__heading" id="tips-title"><span class="tips__title d">Советы</span><span class="tips__sub d">для родителей</span></h2>
+    <p class="tips__lead">Чихуахуа&nbsp;— не аксессуар, а&nbsp;полноценная собака в&nbsp;компактном формате. Вот что поможет ей быть здоровой, смелой и&nbsp;счастливой.</p>
+  </div>
+  <ol class="tips__list">
+    <li class="tip reveal"><span class="tip__n d">01</span><div><h3 class="d">Шлейка вместо ошейника</h3><p>Трахея у&nbsp;мини-пород хрупкая: рывок поводка на ошейнике может её травмировать. Шлейка распределяет нагрузку.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">02</span><div><h3 class="d">Тепло&nbsp;— это забота</h3><p>Свитер или комбинезон в&nbsp;прохладную погоду, лежанка без сквозняков. Если собака дрожит на прогулке&nbsp;— пора домой.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">03</span><div><h3 class="d">Следите за зубами</h3><p>Маленькая челюсть&nbsp;— тесные зубы и&nbsp;быстрый налёт. Чистите их регулярно и&nbsp;показывайте ветеринару.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">04</span><div><h3 class="d">Осторожно с&nbsp;прыжками</h3><p>Прыжок с&nbsp;дивана для чихуахуа&nbsp;— как для нас со второго этажа. Поставьте ступеньки, не опускайте собаку с&nbsp;рук резко.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">05</span><div><h3 class="d">Знакомьте с&nbsp;миром</h3><p>С&nbsp;щенячества показывайте людей, звуки, других собак. Тогда смелость не превратится в&nbsp;нервозность.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">06</span><div><h3 class="d">Меньше&nbsp;— значит больше</h3><p>Порции крошечные, и&nbsp;лишний вес набирается незаметно. Считайте лакомства как часть дневной нормы.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">07</span><div><h3 class="d">Своими лапами</h3><p>Не носите собаку весь день на руках: ей нужны прогулки, запахи и&nbsp;движение не меньше, чем большим породам.</p></div></li>
+    <li class="tip reveal"><span class="tip__n d">08</span><div><h3 class="d">Воспитание лаской</h3><p>Крик пугает, а&nbsp;похвала работает отлично. Короткие занятия по 5&nbsp;минут&nbsp;— и&nbsp;мини-босс станет послушным.</p></div></li>
+  </ol>
+  <p class="tips__tag"><span class="tag">Размер XS — забота XXL</span></p>
+</section>
+
+</main>
+
+<footer class="footer">
+  <svg class="footer__logo" viewBox="0 0 1795 360" aria-hidden="true"><text x="0" y="360" textLength="1795" lengthAdjust="spacingAndGlyphs">CHIHUAHUA</text></svg>
+  <div class="footer__row">
+    <p>Special Edition · 2025</p>
+    <nav aria-label="Разделы">
+      <a href="#history">История</a><a href="#character">Характер</a><a href="#facts">Интересные факты</a><a href="#look">Look of the day</a><a href="#tips">Советы для родителей</a>
+    </nav>
+    <div class="barcode barcode--footer" aria-hidden="true"><span class="barcode__bars"></span><span>Роскошный максимум</span></div>
+  </div>
+</footer>
+
+<!-- общая звёздочка -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 100 100"><path d="M50 0C52 34 66 48 100 50 66 52 52 66 50 100 48 66 34 52 0 50 34 48 48 34 50 0Z"/></symbol>
+</svg>
+
+<script src="script.js"></script>
+</body>
+</html>
