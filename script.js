@@ -39,10 +39,15 @@ document.querySelectorAll('img.asset').forEach((img) => {
 /* 2. Компактное меню после обложки */
 const minibar = document.getElementById('minibar');
 const cover = document.getElementById('top');
-new IntersectionObserver(([e]) => {
-  minibar.classList.toggle('is-on', !e.isIntersecting);
-  minibar.setAttribute('aria-hidden', e.isIntersecting ? 'true' : 'false');
-}, { threshold: 0.05 }).observe(cover);
+// показываем, когда обложка почти ушла вверх (проверка по прокрутке надёжнее наблюдателя на старте)
+const syncMinibar = () => {
+  const on = cover.getBoundingClientRect().bottom < 80;
+  minibar.classList.toggle('is-on', on);
+  minibar.setAttribute('aria-hidden', on ? 'false' : 'true');
+};
+addEventListener('scroll', syncMinibar, { passive: true });
+addEventListener('resize', syncMinibar);
+syncMinibar();
 
 /* 3. Появление блоков при прокрутке */
 const io = new IntersectionObserver((entries) => {
