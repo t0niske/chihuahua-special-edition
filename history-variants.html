@@ -116,9 +116,9 @@
 /* ---------- 5. Карта-постер ---------- */
 .v5 { aspect-ratio: 2000 / 1560; }
 .v5 .bigmap { left: calc(479 * var(--u)); top: calc(60 * var(--u)); width: calc(1451 * var(--u)); }
-.v5 .ttl, .v6 .ttl, .v7 .ttl { left: calc(100 * var(--u)); top: calc(77 * var(--u)); font-size: calc(222 * var(--u) * var(--k)); white-space: nowrap; z-index: 2; }
-.v5 .som, .v6 .som, .v7 .som { top: calc(10 * var(--u)); width: calc(150 * var(--u)); rotate: 10deg; z-index: 3; }
-.v5 .lead, .v6 .lead, .v7 .lead { left: calc(100 * var(--u)); top: calc(375 * var(--u)); width: calc(780 * var(--u)); font-family: var(--body); font-size: calc(30 * var(--u)); line-height: 1.25; z-index: 2; }
+.v5 .ttl, .v6 .ttl, .v7 .ttl, .v8 .ttl, .v9 .ttl, .v10 .ttl { left: calc(100 * var(--u)); top: calc(77 * var(--u)); font-size: calc(222 * var(--u) * var(--k)); white-space: nowrap; z-index: 2; }
+.v5 .som, .v6 .som, .v7 .som, .v8 .som, .v9 .som, .v10 .som { top: calc(10 * var(--u)); width: calc(150 * var(--u)); rotate: 10deg; z-index: 3; }
+.v5 .lead, .v6 .lead, .v7 .lead, .v8 .lead { left: calc(100 * var(--u)); top: calc(375 * var(--u)); width: calc(780 * var(--u)); font-family: var(--body); font-size: calc(30 * var(--u)); line-height: 1.25; z-index: 2; }
 .v5 .year { left: calc(92 * var(--u)); top: calc(640 * var(--u)); font-size: calc(260 * var(--u) * var(--k)); z-index: 2; }
 .v5 .yearcap { left: calc(100 * var(--u)); top: calc(945 * var(--u)); width: calc(500 * var(--u)); z-index: 2; }
 .v5 .fig { left: calc(700 * var(--u)); top: calc(930 * var(--u)); width: calc(430 * var(--u)); z-index: 3; filter: drop-shadow(0 calc(24 * var(--u)) calc(24 * var(--u)) rgba(80,40,20,.2)); }
@@ -153,6 +153,64 @@
 .v7 .st .d { font-size: calc(46 * var(--u) * var(--k)); margin-bottom: calc(12 * var(--u)); }
 .v7 .fig { left: calc(720 * var(--u)); top: calc(360 * var(--u)); width: calc(250 * var(--u)); z-index: 2; rotate: -4deg; }
 .v7 .lead { width: calc(580 * var(--u)); }
+
+/* ---------- общее для 8–10: карта, флаг, кактусы как в 5 ---------- */
+.v8, .v9, .v10 { aspect-ratio: 2000 / 1560; }
+.v8 .bigmap, .v9 .bigmap, .v10 .bigmap { left: calc(479 * var(--u)); top: calc(60 * var(--u)); width: calc(1451 * var(--u)); }
+.v8 .flag, .v9 .flag, .v10 .flag { left: calc(1640 * var(--u)); top: calc(110 * var(--u)); width: calc(280 * var(--u)); rotate: 8deg; z-index: 2; }
+.v8 .mar, .v9 .mar, .v10 .mar { width: calc(120 * var(--u)); z-index: 4; }
+.v8 .cac, .v9 .cac, .v10 .cac { bottom: 0; z-index: 1; pointer-events: none; }
+.stamp { z-index: 3; overflow: visible; }
+.stamp .ring { fill: var(--bg); fill-opacity: .92; stroke: var(--red); }
+.stamp text { fill: var(--red); }
+
+/* ---------- 8. Экспонат ---------- */
+.v8 .card { left: calc(100 * var(--u)); top: calc(640 * var(--u)); width: calc(960 * var(--u)); height: calc(720 * var(--u)); border: calc(3 * var(--u)) dashed var(--red); box-sizing: border-box; z-index: 2; }
+.v8 .card-top { left: calc(130 * var(--u)); top: calc(668 * var(--u)); width: calc(900 * var(--u)); display: flex; justify-content: space-between; color: var(--red); z-index: 3; }
+.v8 .fig { left: calc(330 * var(--u)); top: calc(760 * var(--u)); width: calc(520 * var(--u)); z-index: 3; filter: drop-shadow(0 calc(24 * var(--u)) calc(24 * var(--u)) rgba(80,40,20,.2)); }
+.v8 .callouts { left: 0; top: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
+.v8 .lbl { z-index: 3; font-size: calc(34 * var(--u) * var(--k)); white-space: nowrap; line-height: 1.1; }
+.v8 .card-cap { left: calc(130 * var(--u)); top: calc(1300 * var(--u)); width: calc(900 * var(--u)); z-index: 3; }
+.v8 .card-cap b { color: var(--red); font-weight: 400; }
+.v8 .stamp { left: calc(1620 * var(--u)); top: calc(540 * var(--u)); width: calc(250 * var(--u)); height: calc(250 * var(--u)); rotate: -12deg; }
+.v8 .mar { left: calc(990 * var(--u)); top: calc(1290 * var(--u)); rotate: 18deg; }
+.v8 .cac { left: calc(1000 * var(--u)); width: calc(640 * var(--u)); }
+
+/* ---------- 9. Скобки, даты-бирки и полароид ---------- */
+.v9 .head2 { left: calc(100 * var(--u)); top: calc(395 * var(--u)); width: calc(1050 * var(--u)); font-size: calc(96 * var(--u) * var(--k)); line-height: 1.12; z-index: 2; }
+.v9 .pill { display: inline-block; width: calc(210 * var(--u)); height: calc(86 * var(--u)); border-radius: 999px; background: var(--white); vertical-align: calc(-4 * var(--u)); box-shadow: 0 calc(6 * var(--u)) calc(16 * var(--u)) rgba(60,30,10,.12); position: relative; overflow: hidden; margin: 0 calc(6 * var(--u)); }
+.v9 .pill img { position: absolute; left: 50%; top: 52%; width: calc(112 * var(--u)); translate: -50% -50%; }
+.v9 .tl { left: calc(100 * var(--u)); top: calc(675 * var(--u)); width: calc(590 * var(--u)); display: flex; flex-direction: column; gap: calc(34 * var(--u)); z-index: 2; }
+.v9 .ev { display: grid; grid-template-columns: calc(200 * var(--u)) 1fr; gap: calc(24 * var(--u)); align-items: start; }
+.v9 .ev .t { margin: 0; }
+.v9 .tag { justify-self: start; background: var(--white); color: var(--red); padding: calc(12 * var(--u)) calc(16 * var(--u)); font-size: calc(32 * var(--u) * var(--k)); box-shadow: 0 calc(6 * var(--u)) calc(16 * var(--u)) rgba(60,30,10,.14); white-space: nowrap; }
+.v9 .ev:nth-child(1) .tag { rotate: -3deg; }
+.v9 .ev:nth-child(2) .tag { rotate: 2deg; }
+.v9 .ev:nth-child(3) .tag { rotate: -2deg; background: var(--red); color: var(--white); }
+.v9 .pol { left: calc(735 * var(--u)); top: calc(680 * var(--u)); width: calc(400 * var(--u)); padding: calc(22 * var(--u)) calc(22 * var(--u)) calc(26 * var(--u)); box-sizing: border-box; background: var(--white); rotate: 4deg; z-index: 3; box-shadow: 0 calc(18 * var(--u)) calc(40 * var(--u)) rgba(60,30,10,.18); }
+.v9 .pol .phx { background: #EFE8D8; aspect-ratio: 1 / .86; display: grid; place-items: center; }
+.v9 .pol .phx img { width: 84%; }
+.v9 .pol p { margin: calc(18 * var(--u)) 0 0; }
+.v9 .pol b { color: var(--red); font-weight: 400; }
+.v9 .quote { left: calc(100 * var(--u)); top: calc(1160 * var(--u)); width: calc(520 * var(--u)); background: var(--red); color: var(--white); font: 400 calc(28 * var(--u))/1.05 var(--body); text-transform: uppercase; padding: calc(16 * var(--u)) calc(20 * var(--u)); z-index: 3; }
+.v9 .mar { left: calc(1080 * var(--u)); top: calc(1080 * var(--u)); rotate: -20deg; }
+.v9 .cac { left: calc(-20 * var(--u)); width: calc(780 * var(--u)); }
+
+/* ---------- 10. Газетная вырезка и штамп на карте ---------- */
+.v10 .clip { left: calc(100 * var(--u)); top: calc(395 * var(--u)); width: calc(960 * var(--u)); padding: calc(36 * var(--u)) calc(44 * var(--u)) calc(64 * var(--u)); box-sizing: border-box; background: #EFE8D6; rotate: -1.2deg; z-index: 2; clip-path: polygon(0% 0%, 100% 0%, 100.0% 99.48%, 98.7% 99.13%, 97.2% 99.85%, 95.5% 97.98%, 93.2% 98.32%, 91.6% 98.82%, 90.1% 99.62%, 88.7% 99.53%, 86.2% 98.18%, 83.9% 98.24%, 82.4% 99.32%, 80.3% 98.39%, 77.9% 98.06%, 76.6% 98.67%, 74.5% 98.89%, 73.0% 98.96%, 71.7% 97.94%, 69.3% 98.80%, 67.7% 98.00%, 65.7% 98.06%, 63.3% 98.88%, 61.5% 98.68%, 59.7% 99.65%, 58.1% 98.21%, 56.8% 99.90%, 54.7% 99.38%, 52.8% 98.96%, 51.1% 97.81%, 49.6% 99.09%, 48.1% 98.61%, 46.6% 99.22%, 44.3% 99.29%, 42.3% 98.01%, 41.0% 99.86%, 39.5% 98.32%, 37.4% 99.48%, 35.7% 99.61%, 33.9% 99.91%, 31.7% 98.03%, 29.2% 98.38%, 26.6% 99.96%, 25.0% 97.87%, 22.8% 99.10%, 20.2% 98.63%, 17.9% 99.35%, 16.4% 99.02%, 15.0% 99.16%, 12.5% 99.27%, 11.3% 99.90%, 9.8% 98.28%, 8.1% 99.36%, 6.8% 97.84%, 5.0% 99.54%, 3.7% 99.88%, 2.3% 98.51%, 0.9% 99.91%, 0% 99%); }
+.v10 .clipwrap { filter: drop-shadow(0 calc(14 * var(--u)) calc(22 * var(--u)) rgba(60,30,10,.16)); }
+.v10 .clip-top { display: flex; justify-content: space-between; color: var(--ink); border-top: calc(4 * var(--u)) solid var(--ink); border-bottom: calc(1.5 * var(--u)) solid var(--ink); padding: calc(10 * var(--u)) 0; }
+.v10 .clip h4 { margin: calc(26 * var(--u)) 0 calc(44 * var(--u)); font-size: calc(76 * var(--u) * var(--k)); line-height: 1.05; }
+.v10 .clip-body { display: grid; grid-template-columns: 1fr calc(320 * var(--u)); gap: calc(36 * var(--u)); }
+.v10 .clip-body .t { font-size: calc(25 * var(--u)); margin: 0 0 calc(14 * var(--u)); }
+.v10 .drop { float: left; font: 400 calc(118 * var(--u) * var(--k))/.8 var(--display); font-size-adjust: cap-height 1.0325; color: var(--red); margin: calc(6 * var(--u)) calc(12 * var(--u)) 0 0; }
+.v10 .phx { background: #E4DCC6; aspect-ratio: 1 / 1.05; display: grid; place-items: center; }
+.v10 .phx img { width: 90%; }
+.v10 .ph-cap { font-size: calc(20 * var(--u)) !important; margin-top: calc(10 * var(--u)) !important; opacity: .8; }
+.v10 .lnk { left: 0; top: 0; width: 100%; height: 100%; z-index: 2; pointer-events: none; }
+.v10 .stamp { left: calc(1600 * var(--u)); top: calc(560 * var(--u)); width: calc(260 * var(--u)); height: calc(260 * var(--u)); rotate: 10deg; }
+.v10 .mar { left: calc(1180 * var(--u)); top: calc(1330 * var(--u)); rotate: -14deg; }
+.v10 .cac { left: calc(-20 * var(--u)); width: calc(700 * var(--u)); z-index: 1; }
 </style>
 </head>
 <body>
@@ -308,6 +366,96 @@
   </div>
 </section>
 
+<!-- ===================== 8 ===================== -->
+<h2 class="vhead"><b>Вариант 8</b><span>Техичи как музейный экспонат: рамка, выноски, штамп на карте</span></h2>
+<section class="vb v8">
+  <img class="bigmap" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <p class="lead">Задолго до появления современной породы рядом с&nbsp;тольтеками и&nbsp;майя жили маленькие собачки техичи&nbsp;— прямые предки чихуахуа. Потом их переняли ацтеки, а&nbsp;потом собачки надолго пропали из&nbsp;виду.</p>
+  <i class="card"></i>
+  <div class="card-top cap"><span>Экспонат № 01</span><span>Мексика · IX–XII век</span></div>
+  <img class="fig" src="assets/techichi.png" alt="Техичи">
+  <svg class="callouts" viewBox="0 0 2000 1560" aria-hidden="true" fill="none" stroke="#E7553D" stroke-width="2.5">
+    <path d="M528 784 L600 724"/><circle cx="528" cy="784" r="6" fill="#E7553D"/>
+    <path d="M800 818 L862 790"/><circle cx="800" cy="818" r="6" fill="#E7553D"/>
+    <path d="M352 872 L262 962"/><circle cx="352" cy="872" r="6" fill="#E7553D"/>
+    <path d="M470 1180 L360 1232"/><circle cx="470" cy="1180" r="6" fill="#E7553D"/>
+    <path d="M700 1060 L860 1140"/><circle cx="700" cy="1060" r="6" fill="#E7553D"/>
+  </svg>
+  <b class="d lbl" style="left:calc(608 * var(--u));top:calc(690 * var(--u))">Ушки торчком</b>
+  <b class="d lbl" style="left:calc(870 * var(--u));top:calc(764 * var(--u))">Хвост вверх</b>
+  <b class="d lbl" style="left:calc(130 * var(--u));top:calc(972 * var(--u))">Острая<br>мордочка</b>
+  <b class="d lbl" style="left:calc(130 * var(--u));top:calc(1220 * var(--u))">Короткие лапы</b>
+  <b class="d lbl" style="left:calc(868 * var(--u));top:calc(1126 * var(--u))">Крепкое<br>тело</b>
+  <p class="t card-cap"><b>Техичи.</b> Примерно так выглядели предки чихуахуа</p>
+  <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+    <defs><path id="ring8" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+    <circle class="ring" cx="100" cy="100" r="97" stroke-width="4"/>
+    <circle cx="100" cy="100" r="56" fill="none" stroke="#E7553D" stroke-width="2"/>
+    <text font-family="Igra Sans, sans-serif" font-size="15" letter-spacing="2"><textPath href="#ring8" textLength="455">НАЙДЕНЫ ЗДЕСЬ · ШТАТ ЧИУАУА · 1850-е · </textPath></text>
+    <text x="100" y="117" text-anchor="middle" font-family="Extenda, Anton, sans-serif" font-size="50">1850</text>
+  </svg>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+  <img class="cac" src="assets/cactus-pale-2.webp" alt="">
+  <svg class="star" style="--x:1080;--y:450;--s:50" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1500;--y:1430;--s:40" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ===================== 9 ===================== -->
+<h2 class="vhead"><b>Вариант 9</b><span>Подзаголовок с картинкой в скобках, даты-бирки и полароид</span></h2>
+<section class="vb v9">
+  <img class="bigmap" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <p class="d head2">Предки (<span class="pill"><img src="assets/techichi.png" alt="Техичи"></span>) жили<br>здесь тысячу лет назад</p>
+  <div class="tl">
+    <div class="ev"><b class="d tag">IX–XII век</b><p class="t">Рядом с&nbsp;тольтеками и&nbsp;майя живут маленькие собачки техичи&nbsp;— прямые предки чихуахуа.</p></div>
+    <div class="ev"><b class="d tag">XIV–XVI век</b><p class="t">Собачек переняли ацтеки, а&nbsp;потом техичи надолго пропали из&nbsp;виду.</p></div>
+    <div class="ev"><b class="d tag">1850-е</b><p class="t">Породу снова находят на&nbsp;севере Мексики, в&nbsp;штате Чиуауа. Оттуда и&nbsp;её имя.</p></div>
+  </div>
+  <figure class="pol"><div class="phx"><img src="assets/techichi.png" alt="Техичи"></div><p class="t"><b>Техичи.</b> Примерно так выглядели предки чихуахуа</p></figure>
+  <p class="quote">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;связь с&nbsp;человеком</p>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+  <img class="cac" src="assets/cactus-pale-2.webp" alt="">
+  <svg class="star" style="--x:1090;--y:640;--s:46" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1540;--y:1420;--s:40" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ===================== 10 ===================== -->
+<h2 class="vhead"><b>Вариант 10</b><span>Газетная вырезка 1850-х и штамп «найдены здесь» на карте</span></h2>
+<section class="vb v10">
+  <img class="bigmap" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <article class="clip">
+    <div class="clip-top cap"><span>Хроника породы</span><span>Мексика · 1850-е</span></div>
+    <h4 class="d">В штате Чиуауа нашли крошечных собачек</h4>
+    <div class="clip-body">
+      <div>
+        <p class="t"><span class="drop">З</span>адолго до появления современной породы рядом с&nbsp;тольтеками и&nbsp;майя жили маленькие собачки техичи&nbsp;— прямые предки чихуахуа. Потом их переняли ацтеки, а&nbsp;после собачки надолго пропали из&nbsp;виду.</p>
+        <p class="t">В&nbsp;1850-х крошечных собак снова нашли на&nbsp;севере Мексики, в&nbsp;штате Чиуауа. По&nbsp;его имени порода и&nbsp;получила название.</p>
+        <p class="t">В&nbsp;их характере до&nbsp;сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;связь с&nbsp;человеком.</p>
+      </div>
+      <figure style="margin:0"><div class="phx"><img src="assets/techichi.png" alt="Техичи"></div><figcaption class="t ph-cap">Техичи. Примерно так выглядели предки чихуахуа</figcaption></figure>
+    </div>
+  </article>
+  <svg class="lnk" viewBox="0 0 2000 1560" aria-hidden="true"><path d="M1066 520 C1250 470 1420 470 1560 560" fill="none" stroke="#E7553D" stroke-width="4" stroke-dasharray="14 12" stroke-linecap="round"/><circle cx="1560" cy="560" r="9" fill="#E7553D"/></svg>
+  <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
+    <defs><path id="ring10" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+    <circle class="ring" cx="100" cy="100" r="97" stroke-width="4"/>
+    <circle cx="100" cy="100" r="56" fill="none" stroke="#E7553D" stroke-width="2"/>
+    <text font-family="Igra Sans, sans-serif" font-size="15" letter-spacing="2"><textPath href="#ring10" textLength="455">НАЙДЕНЫ ЗДЕСЬ · ШТАТ ЧИУАУА · 1850-е · </textPath></text>
+    <text x="100" y="117" text-anchor="middle" font-family="Extenda, Anton, sans-serif" font-size="50">1850</text>
+  </svg>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+  <img class="cac" src="assets/cactus-pale.webp" alt="">
+  <svg class="star" style="--x:1110;--y:1250;--s:50" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 100 100"><path d="M50 0C52 34 66 48 100 50 66 52 52 66 50 100 48 66 34 52 0 50 34 48 48 34 50 0Z"/></symbol>
 </svg>
@@ -315,7 +463,7 @@
 /* ?only=2 — показать один вариант (для скриншотов) */
 const only = new URLSearchParams(location.search).get('only');
 /* сомбреро — на последней букве заголовка */
-const placeSom = () => document.querySelectorAll('.v4 .som, .v5 .som, .v6 .som, .v7 .som').forEach((som) => {
+const placeSom = () => document.querySelectorAll('.v4 .som, .v5 .som, .v6 .som, .v7 .som, .v8 .som, .v9 .som, .v10 .som').forEach((som) => {
   const ttl = som.parentElement.querySelector('.ttl');
   const b = som.parentElement.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(ttl); const t = r.getBoundingClientRect();
   som.style.left = (t.right - b.left - som.offsetWidth * .75) + 'px';
