@@ -460,6 +460,9 @@ br.dt { display: none; }
   }
   .cover .barcode__bars { height: auto; flex: 1; }
   .cover .star { display: block; }
+  /* звёзды, привязанные к надписям: двигаются вместе с ними */
+  .cover__edition .star { top: calc(100% + 34 * var(--m)); }
+  .cl--ways .star { left: auto; right: calc(100% + 24 * var(--m)); top: calc(30 * var(--t)); translate: 0 -50%; }
 
   .ticker { padding: calc(var(--W) * 16 / 2000) 0; }
   .ticker__track { gap: calc(var(--W) * 40 / 2000); }
