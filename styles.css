@@ -445,7 +445,8 @@ br.dt { display: none; }
   /* нижняя строка и штрих-код стоят на одной линии снизу */
   .cl--model { left: calc(102 * var(--mx)); top: auto; bottom: calc(40 * var(--m)); }
   .cl--model b.d { font-size: calc(64 * var(--t) * var(--k)); line-height: 1.28; }
-  .cl--energy { right: calc(105 * var(--mx)); top: calc(782 * var(--m) - 120 * (var(--t) - var(--m))); }
+  .cl--energy { right: calc(105 * var(--mx)); top: calc(785 * var(--m) - 150 * (var(--t) - var(--m))); }   /* верх — на одной линии с «Входит в топ» */
+  .cl--energy .caps { text-box: trim-both cap alphabetic; }   /* верх блока = верх прописных, как у заголовка слева */
   .cl--ways { right: calc(105 * var(--mx)); top: auto; bottom: calc(243 * var(--m) + 60 * var(--t)); }   /* растёт вверх, не наезжая на плашку */
   .cl--size { right: calc(105 * var(--mx)); top: auto; bottom: calc(229 * var(--m)); }
   .cl--size .tag { font-size: calc(45 * var(--t)); padding: 0 calc(10 * var(--m)); }
