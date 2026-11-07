@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Древние корни — варианты</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&text=0123456789&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=15">
+<style>
+/* Варианты блока «Древние корни». Сетка как на сайте: 1 единица = 1px макета шириной 2000 */
+.vhead {
+  display: flex; align-items: baseline; gap: 18px; flex-wrap: wrap;
+  margin: 0; padding: 22px max(16px, 5vw) 18px;
+  border-top: 3px solid var(--red);
+  font: 400 16px/1.3 var(--body);
+}
+.vhead b { font: 400 34px/1 var(--display); font-size-adjust: cap-height 1.0325; color: var(--red); text-transform: uppercase; }
+.vhead span { color: var(--ink); opacity: .7; }
+.vb { position: relative; width: 100%; container-type: inline-size; overflow: hidden; margin-bottom: 70px; }
+.vb > * { position: absolute; margin: 0; }
+.vb { --u: calc(100cqw / 2000); }
+.vb .d { color: var(--red); }
+.t { font-family: var(--body); font-size: calc(27 * var(--u)); line-height: 1.25; }
+.cap { font-family: var(--body); text-transform: uppercase; font-size: calc(19 * var(--u)); letter-spacing: .04em; line-height: 1.3; }
+.vb .star { left: calc(var(--x) * var(--u)); top: calc(var(--y) * var(--u)); width: calc(var(--s) * var(--u)); height: calc(var(--s) * var(--u)); }
+.vb img { height: auto; max-width: none; }
+
+/* ---------- 1. Техичи на буквах ---------- */
+.v1 { aspect-ratio: 2000 / 1300; }
+.v1 .l1, .v1 .l2 { left: 0; right: 0; text-align: center; font-size: calc(330 * var(--u) * var(--k)); white-space: nowrap; }
+.v1 .l1 { top: calc(120 * var(--u)); }
+.v1 .l2 { top: calc(520 * var(--u)); }
+.v1 .fig { left: calc(1000 * var(--u) - 330 * var(--u)); bottom: calc(40 * var(--u)); width: calc(660 * var(--u)); z-index: 3; filter: drop-shadow(0 calc(30 * var(--u)) calc(30 * var(--u)) rgba(80,40,20,.18)); }
+.v1 .side { width: calc(460 * var(--u)); display: flex; flex-direction: column; gap: calc(18 * var(--u)); z-index: 4; }
+.v1 .side .d { font-size: calc(46 * var(--u) * var(--k)); }
+.v1 .side--l { left: calc(100 * var(--u)); top: calc(930 * var(--u)); }
+.v1 .side--r { right: calc(100 * var(--u)); top: calc(930 * var(--u)); text-align: right; align-items: flex-end; }
+.v1 .tiny-l { left: calc(100 * var(--u)); top: calc(150 * var(--u)); width: calc(250 * var(--u)); color: var(--red); }
+.v1 .tiny-r { right: calc(100 * var(--u)); top: calc(560 * var(--u)); width: calc(250 * var(--u)); text-align: right; color: var(--red); }
+.v1 .flag { left: calc(110 * var(--u)); top: calc(500 * var(--u)); width: calc(330 * var(--u)); rotate: -8deg; z-index: 2; }
+.v1 .mar { left: calc(380 * var(--u)); top: calc(640 * var(--u)); width: calc(110 * var(--u)); rotate: 14deg; z-index: 2; }
+.v1 .map { right: calc(60 * var(--u)); top: calc(110 * var(--u)); width: calc(400 * var(--u)); opacity: .9; }
+.v1 .som { left: calc(1310 * var(--u)); top: calc(445 * var(--u)); width: calc(190 * var(--u)); rotate: 14deg; z-index: 2; }
+
+/* ---------- 2. Строки с картинками ---------- */
+.v2 { aspect-ratio: 2000 / 1280; }
+.v2 .rub { left: calc(100 * var(--u)); right: calc(100 * var(--u)); top: calc(50 * var(--u)); display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: calc(18 * var(--u)); border-bottom: calc(3 * var(--u)) solid var(--red); }
+.v2 .rub .d { font-size: calc(40 * var(--u) * var(--k)); }
+.v2 .lines { left: calc(80 * var(--u)); right: calc(80 * var(--u)); top: calc(190 * var(--u)); display: flex; flex-direction: column; gap: calc(52 * var(--u)); }
+.v2 .ln { display: flex; justify-content: center; align-items: center; gap: calc(34 * var(--u)); }
+.v2 .ln .d { font-size: calc(170 * var(--u) * var(--k)); white-space: nowrap; }
+.v2 .pill { display: block; flex: none; width: calc(360 * var(--u)); height: calc(170 * var(--u)); border-radius: 999px; overflow: hidden; background: var(--peach); position: relative; }
+.v2 .pill img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.v2 .pill--fig img { object-fit: contain; padding: calc(12 * var(--u)); }
+.v2 .pill--cac img { object-position: 50% 20%; }
+.v2 .list { left: calc(100 * var(--u)); right: calc(100 * var(--u)); top: calc(890 * var(--u)); display: grid; grid-template-columns: repeat(4, 1fr); gap: calc(50 * var(--u)); }
+.v2 .it { border-top: calc(3 * var(--u)) solid var(--red); padding-top: calc(22 * var(--u)); display: flex; flex-direction: column; gap: calc(18 * var(--u)); }
+.v2 .it .n { font-size: calc(80 * var(--u) * var(--k)); }
+.v2 .it h3 { color: var(--ink); font-size: calc(36 * var(--u) * var(--k)); }
+.v2 .star { z-index: 2; }
+
+/* ---------- 3. Журнальный разворот ---------- */
+.v3 { aspect-ratio: 2000 / 1300; }
+.v3 .fold { left: calc(940 * var(--u)); width: calc(120 * var(--u)); top: 0; bottom: 0; background: linear-gradient(90deg, transparent, rgba(60,30,10,.08) 48%, rgba(60,30,10,.16) 50%, rgba(60,30,10,.08) 52%, transparent); }
+.v3 .rub { top: calc(60 * var(--u)); font-size: calc(30 * var(--u) * var(--k)); }
+.v3 .rub--l { left: calc(100 * var(--u)); }
+.v3 .rub--r { right: calc(100 * var(--u)); }
+.v3 .folio { bottom: calc(50 * var(--u)); font-family: var(--body); font-size: calc(20 * var(--u)); }
+.v3 .folio--l { left: calc(100 * var(--u)); }
+.v3 .folio--r { right: calc(100 * var(--u)); }
+.v3 .ttl { left: calc(100 * var(--u)); top: calc(150 * var(--u)); font-size: calc(200 * var(--u) * var(--k)); }
+.v3 .som { left: calc(640 * var(--u)); top: calc(355 * var(--u)); width: calc(150 * var(--u)); rotate: 12deg; }
+.v3 .col { left: calc(100 * var(--u)); top: calc(700 * var(--u)); width: calc(460 * var(--u)); display: flex; flex-direction: column; gap: calc(20 * var(--u)); }
+.v3 .drop { float: left; font: 400 calc(150 * var(--u) * var(--k))/1 var(--display); font-size-adjust: cap-height 1.0325; color: var(--red); margin: calc(6 * var(--u)) calc(14 * var(--u)) 0 0; text-box: trim-both cap alphabetic; }
+.v3 .fig { left: calc(620 * var(--u)); top: calc(660 * var(--u)); width: calc(270 * var(--u)); }
+.v3 .note { background: var(--white); padding: calc(22 * var(--u)) calc(26 * var(--u)); box-shadow: 0 calc(8 * var(--u)) calc(24 * var(--u)) rgba(60,30,10,.12); display: flex; flex-direction: column; gap: calc(10 * var(--u)); z-index: 3; }
+.v3 .note .d { font-size: calc(44 * var(--u) * var(--k)); }
+.v3 .note::before { content: ""; position: absolute; left: 50%; top: calc(-16 * var(--u)); width: calc(110 * var(--u)); height: calc(32 * var(--u)); translate: -50% 0; background: rgba(241,210,188,.85); rotate: -3deg; }
+.v3 .n1 { left: calc(600 * var(--u)); top: calc(930 * var(--u)); width: calc(320 * var(--u)); rotate: -3deg; }
+.v3 .map { left: calc(1040 * var(--u)); top: calc(140 * var(--u)); width: calc(880 * var(--u)); }
+.v3 .n2 { left: calc(1070 * var(--u)); top: calc(560 * var(--u)); width: calc(330 * var(--u)); rotate: 2.5deg; }
+.v3 .pin { left: calc(1395 * var(--u)); top: calc(585 * var(--u)); width: calc(250 * var(--u)); height: calc(3 * var(--u)); background: var(--red); rotate: -30deg; transform-origin: 0 0; z-index: 3; }
+.v3 .n3 { left: calc(1080 * var(--u)); top: calc(880 * var(--u)); width: calc(350 * var(--u)); rotate: -2deg; }
+.v3 .flag { right: calc(110 * var(--u)); top: calc(890 * var(--u)); width: calc(300 * var(--u)); rotate: 6deg; z-index: 2; }
+.v3 .mar { right: calc(90 * var(--u)); top: calc(1010 * var(--u)); width: calc(100 * var(--u)); rotate: -12deg; z-index: 2; }
+.v3 .cac { left: 0; bottom: 0; width: calc(330 * var(--u)); opacity: .45; }
+</style>
+</head>
+<body>
+
+<!-- ===================== 1 ===================== -->
+<h2 class="vhead"><b>Вариант 1</b><span>Техичи на буквах — как модель на обложке VOGUE</span></h2>
+<section class="vb v1">
+  <div class="d l1">Древние</div>
+  <div class="d l2">корни</div>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <img class="fig" src="assets/techichi.png" alt="Фигурка техичи">
+  <p class="cap tiny-l">Тольтеки · майя · ацтеки — Мексика, IX–XVI века</p>
+  <p class="cap tiny-r">Прямые предки чихуахуа</p>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+  <img class="map" src="assets/map.webp" alt="Карта Мексики">
+  <div class="side side--l">
+    <b class="d">Техичи</b>
+    <p class="t">Задолго до появления современной породы рядом с&nbsp;народами тольтеков и&nbsp;майя жили маленькие собачки техичи&nbsp;— именно они считаются прямыми предками чихуахуа</p>
+  </div>
+  <div class="side side--r">
+    <b class="d">В XIX веке...</b>
+    <p class="t">Породу вновь открыли в&nbsp;мексиканском штате Чиуауа, откуда началось её стремительное покорение мира.</p>
+  </div>
+  <svg class="star" style="--x:560;--y:300;--s:60" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1480;--y:150;--s:40" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:620;--y:1050;--s:46" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1420;--y:880;--s:70" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ===================== 2 ===================== -->
+<h2 class="vhead"><b>Вариант 2</b><span>Строки с картинками — как «Culture [фото] alive» у VOGUE, ниже даты списком</span></h2>
+<section class="vb v2">
+  <div class="rub"><b class="d">История</b><span class="cap">Special Edition · стр. 02</span></div>
+  <div class="lines">
+    <div class="ln"><span class="d">Тольтеки</span><span class="pill pill--fig"><img src="assets/techichi.png" alt="Техичи"></span><span class="d">и майя</span></div>
+    <div class="ln"><span class="d">Мексика</span><span class="pill"><img src="assets/flag.png" alt="Флаг Мексики"></span><span class="d">Чиуауа</span></div>
+    <div class="ln"><span class="d">1850</span><span class="pill pill--cac"><img src="assets/cactus.png" alt="Кактус"></span><span class="d">1904</span></div>
+  </div>
+  <div class="list">
+    <div class="it"><b class="d n">01</b><h3 class="d">IX–XII век</h3><p class="t">Рядом с&nbsp;тольтеками и&nbsp;майя живут маленькие собачки техичи&nbsp;— прямые предки чихуахуа.</p></div>
+    <div class="it"><b class="d n">02</b><h3 class="d">Древняя сила</h3><p class="t">Проницательность, смелость и&nbsp;связь с&nbsp;человеком чувствуются в&nbsp;характере до&nbsp;сих пор.</p></div>
+    <div class="it"><b class="d n">03</b><h3 class="d">1850-е</h3><p class="t">Породу вновь открывают в&nbsp;мексиканском штате Чиуауа&nbsp;— отсюда и&nbsp;её имя.</p></div>
+    <div class="it"><b class="d n">04</b><h3 class="d">1904</h3><p class="t">Первую чихуахуа записывают в&nbsp;реестр, и&nbsp;порода начинает покорять мир.</p></div>
+  </div>
+  <svg class="star" style="--x:110;--y:560;--s:56" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1890;--y:330;--s:44" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ===================== 3 ===================== -->
+<h2 class="vhead"><b>Вариант 3</b><span>Журнальный разворот — две страницы, заметки на полях</span></h2>
+<section class="vb v3">
+  <div class="fold"></div>
+  <b class="d rub rub--l">История</b>
+  <span class="cap rub rub--r" style="font-size:calc(19 * var(--u))">Special Edition</span>
+  <span class="folio folio--l">12</span><span class="folio folio--r">13</span>
+  <h3 class="d ttl">Древние<br>корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <div class="col">
+    <p class="t"><span class="drop">З</span>адолго до появления современной породы рядом с&nbsp;народами тольтеков и&nbsp;майя жили маленькие собачки техичи&nbsp;— именно они считаются прямыми предками чихуахуа.</p>
+    <p class="t">В&nbsp;их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;врождённая связь с&nbsp;человеком.</p>
+  </div>
+  <img class="fig" src="assets/techichi.png" alt="Фигурка техичи">
+  <div class="note n1"><b class="d">Техичи</b><p class="t">Так называли маленьких собачек тольтеков</p></div>
+  <img class="cac" src="assets/cactus.png" alt="">
+  <img class="map" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <i class="pin"></i>
+  <div class="note n2"><b class="d">1850-е</b><p class="t">Породу вновь открыли в&nbsp;штате Чиуауа</p></div>
+  <div class="note n3"><b class="d">1904</b><p class="t">Первая чихуахуа в&nbsp;реестре&nbsp;— начало покорения мира</p></div>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="star" viewBox="0 0 100 100"><path d="M50 0C52 34 66 48 100 50 66 52 52 66 50 100 48 66 34 52 0 50 34 48 48 34 50 0Z"/></symbol>
+</svg>
+<script>
+/* ?only=2 — показать один вариант (для скриншотов) */
+const only = new URLSearchParams(location.search).get('only');
+if (only) document.querySelectorAll('.vhead, .vb').forEach((el, i) => { if (Math.floor(i / 2) + 1 !== +only) el.style.display = "none"; });
+</script>
+</body>
+</html>
