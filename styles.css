@@ -396,18 +396,18 @@ br.dt { display: none; }
   }
   .nav a:hover::after { transform: none; }
 
-  .cover__title { left: calc(95 * var(--mx)); top: calc(135 * var(--m)); width: calc(1795 * var(--mx)); }
-  .cover__title svg { height: calc(360 * var(--m)); }
-  .cover__edition { left: calc(104 * var(--mx)); top: calc(503 * var(--m)); font-size: calc(31 * var(--t)); }
-  .cover__year { right: calc(105 * var(--mx)); top: calc(503 * var(--m)); font-size: calc(31 * var(--t)); }
+  .cover__title { left: calc(95 * var(--mx)); top: calc(115 * var(--m)); width: calc(1795 * var(--mx)); }
+  .cover__title svg { height: calc(300 * var(--m)); }
+  .cover__edition { left: calc(104 * var(--mx)); top: calc(423 * var(--m)); font-size: calc(31 * var(--t)); }
+  .cover__year { right: calc(105 * var(--mx)); top: calc(423 * var(--m)); font-size: calc(31 * var(--t)); }
   br.dt { display: inline; }
   .cover__flower--tr { top: 0; right: var(--edge); width: calc(530 * var(--m)); }
   .cover__flower--bl { bottom: 0; left: var(--edge); width: calc(680 * var(--m)); }
   .cover__flower--br { bottom: 0; right: var(--edge); width: calc(620 * var(--m)); }
   .cover__dog {
     aspect-ratio: auto;
-    left: calc(1020 * var(--mx) - 560 * var(--m)); top: calc(340 * var(--m));
-    width: calc(1120 * var(--m));
+    left: calc(1020 * var(--mx) - 630 * var(--m)); top: auto; bottom: 0;   /* стоит прямо на бегущей строке */
+    width: calc(1260 * var(--m));
     -webkit-mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
             mask-image: linear-gradient(to right, transparent 0, #000 6%, #000 94%, transparent 100%);
   }
@@ -416,21 +416,22 @@ br.dt { display: none; }
   .cl--energy:hover, .cl--ways:hover, .cl--size:hover { transform: translateX(calc(-8 * var(--m))); }
   .cl b.d { font-size: calc(60 * var(--t) * var(--k)); }
   .cl .caps { font-size: calc(39 * var(--t)); line-height: 1.02; }
-  .cl--top { left: calc(102 * var(--mx)); top: calc(785 * var(--m) - 120 * (var(--t) - var(--m))); }
-  .cl--boss { left: calc(102 * var(--mx)); top: calc(1015 * var(--m)); }
-  .cl--model { left: calc(102 * var(--mx)); top: calc(1217 * var(--m)); }
+  .cl--top { left: calc(102 * var(--mx)); top: calc(785 * var(--m) - 150 * (var(--t) - var(--m))); }
+  .cl--boss { left: calc(102 * var(--mx)); top: calc(1015 * var(--m) - 110 * (var(--t) - var(--m))); }
+  /* нижняя строка и штрих-код стоят на одной линии снизу */
+  .cl--model { left: calc(102 * var(--mx)); top: auto; bottom: calc(40 * var(--m)); }
   .cl--model b.d { font-size: calc(64 * var(--t) * var(--k)); line-height: .73; }
   .cl--energy { right: calc(105 * var(--mx)); top: calc(782 * var(--m) - 120 * (var(--t) - var(--m))); }
-  .cl--ways { right: calc(105 * var(--mx)); top: auto; bottom: calc(100% - 1116 * var(--m)); }   /* растёт вверх, не наезжая на плашку */
-  .cl--size { right: calc(105 * var(--mx)); top: calc(1128 * var(--m)); }
+  .cl--ways { right: calc(105 * var(--mx)); top: auto; bottom: calc(243 * var(--m) + 60 * var(--t)); }   /* растёт вверх, не наезжая на плашку */
+  .cl--size { right: calc(105 * var(--mx)); top: auto; bottom: calc(229 * var(--m)); }
   .cl--size .tag { font-size: calc(45 * var(--t)); padding: 0 calc(10 * var(--m)); }
   .cover .barcode {
     display: flex;
-    right: calc(105 * var(--mx)); top: calc(1230 * var(--m));
-    width: calc(305 * var(--m)); height: calc(125 * var(--m));
-    padding: calc(10 * var(--m)) calc(14 * var(--m)) calc(8 * var(--m));
-    gap: calc(6 * var(--m)); border-radius: calc(14 * var(--m));
-    font-size: calc(18 * var(--m)); letter-spacing: 0; white-space: nowrap;
+    right: calc(105 * var(--mx)); top: auto; bottom: calc(40 * var(--m));
+    width: calc(400 * var(--m)); height: calc(165 * var(--m));
+    padding: calc(13 * var(--m)) calc(18 * var(--m)) calc(10 * var(--m));
+    gap: calc(8 * var(--m)); border-radius: calc(18 * var(--m));
+    font-size: calc(23 * var(--m)); letter-spacing: 0; white-space: nowrap;
   }
   .cover .barcode__bars { height: auto; flex: 1; }
   .cover .star { display: block; }
