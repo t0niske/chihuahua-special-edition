@@ -1,5 +1,10 @@
 document.documentElement.classList.add('js');
 
+/* ширина окна без полосы прокрутки — для высоты блоков на десктопе */
+const setVw = () => document.documentElement.style.setProperty('--vw', `${document.documentElement.clientWidth}px`);
+setVw();
+addEventListener('resize', setVw);
+
 /* 0. Вытянутые заголовки: текст масштабируется по вертикали (как в макетах),
       а высота блока подгоняется, чтобы не наезжать на соседей. */
 const stretched = [...document.querySelectorAll('.d')].map((el) => {
