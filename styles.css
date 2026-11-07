@@ -406,10 +406,10 @@ br.dt { display: none; }
   .cover { display: block; height: min(calc(var(--vw, 100vw) * 1422 / 2000), calc(100vh - var(--bar))); padding: 0; }
   .cover > * { position: absolute; margin: 0; }
   .nav {
-    left: calc(102 * var(--mx)); right: calc(105 * var(--mx));
+    left: calc(99 * var(--mx)); right: calc(101 * var(--mx));
     top: calc(20 * var(--m)); height: calc(52 * var(--m));
     justify-content: space-between; gap: 0; padding: 0; overflow: visible;
-    font-size: calc(30 * var(--t));
+    font-size: calc(27.5 * var(--t));
     z-index: 6;
   }
   .nav i { width: calc(3 * var(--m)); height: calc(46 * var(--m)); }
@@ -423,7 +423,7 @@ br.dt { display: none; }
   .cover__title { left: calc(95 * var(--mx)); top: calc(115 * var(--m)); width: calc(1795 * var(--mx)); }
   .cover__title svg { height: calc(300 * var(--m)); }
   .cover__edition { left: calc(104 * var(--mx)); top: calc(423 * var(--m)); font-size: calc(31 * var(--t)); }
-  .cover__year { right: calc(105 * var(--mx)); top: calc(423 * var(--m)); font-size: calc(31 * var(--t)); }
+  .cover__year { right: calc(101 * var(--mx)); top: calc(423 * var(--m)); font-size: calc(31 * var(--t)); }
   br.dt { display: inline; }
   .cover__flower--tr { top: 0; right: var(--edge); width: calc(530 * var(--m)); }
   .cover__flower--bl { bottom: 0; left: var(--edge); width: calc(680 * var(--m)); }
@@ -440,23 +440,23 @@ br.dt { display: none; }
   .cl--energy:hover, .cl--ways:hover, .cl--size:hover { transform: translateX(calc(-8 * var(--m))); }
   .cl b.d { font-size: calc(60 * var(--t) * var(--k)); }
   .cl .caps { font-size: calc(39 * var(--t)); line-height: 1.02; }
-  .cl--top { left: calc(102 * var(--mx)); top: calc(785 * var(--m) - 150 * (var(--t) - var(--m))); }
-  .cl--boss { left: calc(102 * var(--mx)); top: calc(1015 * var(--m) - 110 * (var(--t) - var(--m))); }
+  .cl--top { left: calc(99 * var(--mx)); top: calc(785 * var(--m) - 150 * (var(--t) - var(--m))); }
+  .cl--boss { left: calc(99 * var(--mx)); top: calc(1015 * var(--m) - 110 * (var(--t) - var(--m))); }
   /* нижняя строка и штрих-код стоят на одной линии снизу */
-  .cl--model { left: calc(102 * var(--mx)); top: auto; bottom: calc(40 * var(--m)); }
+  .cl--model { left: calc(99 * var(--mx)); top: auto; bottom: calc(63 * var(--m)); }
   .cl--model b.d { font-size: calc(64 * var(--t) * var(--k)); line-height: 1.28; }
-  .cl--energy { right: calc(105 * var(--mx)); top: calc(785 * var(--m) - 150 * (var(--t) - var(--m))); }   /* верх — на одной линии с «Входит в топ» */
+  .cl--energy { right: calc(101 * var(--mx)); top: calc(785 * var(--m) - 150 * (var(--t) - var(--m))); }   /* верх — на одной линии с «Входит в топ» */
   .cl--energy .caps { text-box: trim-both cap alphabetic; }   /* верх блока = верх прописных, как у заголовка слева */
-  .cl--ways { right: calc(105 * var(--mx)); top: auto; bottom: calc(243 * var(--m) + 60 * var(--t)); }   /* растёт вверх, не наезжая на плашку */
-  .cl--size { right: calc(105 * var(--mx)); top: auto; bottom: calc(229 * var(--m)); }
+  .cl--ways { right: calc(101 * var(--mx)); top: auto; bottom: calc(266 * var(--m) + 60 * var(--t)); }   /* растёт вверх, не наезжая на плашку */
+  .cl--size { right: calc(101 * var(--mx)); top: auto; bottom: calc(252 * var(--m)); }
   .cl--size .tag { font-size: calc(45 * var(--t)); padding: 0 calc(10 * var(--m)); }
   .cover .barcode {
     display: flex;
-    right: calc(105 * var(--mx)); top: auto; bottom: calc(40 * var(--m));
+    right: calc(101 * var(--mx)); top: auto; bottom: calc(63 * var(--m));
     width: calc(400 * var(--m)); height: calc(165 * var(--m));
     padding: calc(13 * var(--m)) calc(18 * var(--m)) calc(10 * var(--m));
     gap: calc(8 * var(--m)); border-radius: calc(18 * var(--m));
-    font-size: calc(23 * var(--m)); letter-spacing: 0; white-space: nowrap;
+    font-size: calc(19 * var(--m)); letter-spacing: 0; white-space: nowrap;
   }
   .cover .barcode__bars { height: auto; flex: 1; }
   .cover .star { display: block; }
