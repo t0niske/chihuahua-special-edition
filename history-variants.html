@@ -86,6 +86,29 @@
 .v3 .flag { right: calc(110 * var(--u)); top: calc(890 * var(--u)); width: calc(300 * var(--u)); rotate: 6deg; z-index: 2; }
 .v3 .mar { right: calc(90 * var(--u)); top: calc(1010 * var(--u)); width: calc(100 * var(--u)); rotate: -12deg; z-index: 2; }
 .v3 .cac { left: 0; bottom: 0; width: calc(330 * var(--u)); opacity: .45; }
+
+/* ---------- 4. Как сейчас: заголовок с сомбреро, карта справа, текст слева ---------- */
+.v4 { aspect-ratio: 2000 / 1427; }
+.v4 .map { right: calc(30 * var(--u)); top: calc(40 * var(--u)); width: calc(960 * var(--u)); z-index: 0; }
+.v4 .ttl { left: calc(100 * var(--u)); top: calc(77 * var(--u)); font-size: calc(222 * var(--u) * var(--k)); white-space: nowrap; z-index: 2; }
+.v4 .som { top: calc(10 * var(--u)); width: calc(150 * var(--u)); rotate: 10deg; z-index: 3; }
+.v4 .lead { left: calc(100 * var(--u)); top: calc(375 * var(--u)); width: calc(840 * var(--u)); font-family: var(--body); font-size: calc(30 * var(--u)); line-height: 1.25; }
+.v4 .lead::first-letter { color: var(--red); }
+.v4 .fig { left: calc(100 * var(--u)); top: calc(650 * var(--u)); width: calc(230 * var(--u)); }
+.v4 .figcap { left: calc(360 * var(--u)); top: calc(665 * var(--u)); width: calc(330 * var(--u)); }
+.v4 .figcap .d { font-size: calc(34 * var(--u) * var(--k)); margin-bottom: calc(14 * var(--u)); }
+.v4 .flag { left: calc(720 * var(--u)); top: calc(650 * var(--u)); width: calc(250 * var(--u)); rotate: -6deg; }
+.v4 .mar { left: calc(900 * var(--u)); top: calc(755 * var(--u)); width: calc(85 * var(--u)); rotate: 16deg; }
+.v4 .tl { left: calc(100 * var(--u)); top: calc(930 * var(--u)); width: calc(900 * var(--u)); display: grid; grid-template-columns: 1fr 1fr; gap: calc(40 * var(--u)) calc(60 * var(--u)); }
+.v4 .ev { border-top: calc(3 * var(--u)) solid var(--red); padding-top: calc(18 * var(--u)); display: flex; flex-direction: column; gap: calc(14 * var(--u)); }
+.v4 .ev .d { font-size: calc(50 * var(--u) * var(--k)); }
+.v4 .t { font-size: calc(25 * var(--u)); }
+.v4 .pin { left: calc(1310 * var(--u)); top: calc(355 * var(--u)); width: calc(180 * var(--u)); height: calc(3 * var(--u)); background: var(--red); rotate: 25deg; transform-origin: 0 0; z-index: 2; }
+.v4 .tag { right: calc(470 * var(--u)); top: calc(250 * var(--u)); z-index: 2; }
+.v4 .tag .d { font-size: calc(30 * var(--u) * var(--k)); }
+.v4 .quote { left: calc(1080 * var(--u)); bottom: calc(80 * var(--u)); width: calc(560 * var(--u)); background: var(--red); color: var(--white); font: 400 calc(30 * var(--u))/1.05 var(--body); text-transform: uppercase; padding: calc(16 * var(--u)) calc(20 * var(--u)); z-index: 3; }
+.v4 .cac { left: calc(1000 * var(--u)); bottom: 0; width: calc(520 * var(--u)); opacity: .45; z-index: 1; }
+.v4 .star { z-index: 3; }
 </style>
 </head>
 <body>
@@ -159,12 +182,40 @@
   <img class="mar" src="assets/maracas.png" alt="">
 </section>
 
+<!-- ===================== 4 ===================== -->
+<h2 class="vhead"><b>Вариант 4</b><span>Заголовок с сомбреро и карта справа, как сейчас; слева текст и даты</span></h2>
+<section class="vb v4">
+  <img class="map" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <p class="lead">Задолго до появления современной породы рядом с&nbsp;тольтеками и&nbsp;майя жили маленькие собачки техичи&nbsp;— прямые предки чихуахуа. Позже их переняли ацтеки, а&nbsp;в&nbsp;XIX веке порода снова нашлась на севере Мексики.</p>
+  <img class="fig" src="assets/techichi.png" alt="Глиняная фигурка собаки">
+  <div class="figcap"><b class="d">Глиняные собаки</b><p class="t">Такие фигурки находят в&nbsp;древних захоронениях Западной Мексики. Некоторым из&nbsp;них около 2000 лет</p></div>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+  <div class="tl">
+    <div class="ev"><b class="d">IX–XII век</b><p class="t">Тольтеки держат техичи&nbsp;— маленьких тихих собачек, которых считали спутниками и&nbsp;хранителями дома.</p></div>
+    <div class="ev"><b class="d">1850-е</b><p class="t">Собачек находят в&nbsp;мексиканском штате Чиуауа&nbsp;— отсюда и&nbsp;название породы.</p></div>
+    <div class="ev"><b class="d">1904</b><p class="t">Первую чихуахуа записывают в&nbsp;реестр Американского клуба собаководства.</p></div>
+    <div class="ev"><b class="d">1923</b><p class="t">В&nbsp;США появляется первый клуб любителей породы&nbsp;— начинается её мировая слава.</p></div>
+  </div>
+  <img class="cac" src="assets/cactus-2.png" alt="">
+  <p class="quote">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;связь с&nbsp;человеком</p>
+  <svg class="star" style="--x:1000;--y:420;--s:50" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1920;--y:1060;--s:70" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1000;--y:900;--s:40" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 100 100"><path d="M50 0C52 34 66 48 100 50 66 52 52 66 50 100 48 66 34 52 0 50 34 48 48 34 50 0Z"/></symbol>
 </svg>
 <script>
 /* ?only=2 — показать один вариант (для скриншотов) */
 const only = new URLSearchParams(location.search).get('only');
+/* сомбреро — на последней букве заголовка */
+const ttl = document.querySelector('.v4 .ttl'), som = document.querySelector('.v4 .som');
+const placeSom = () => { const b = ttl.parentElement.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(ttl); const t = r.getBoundingClientRect(); som.style.left = (t.right - b.left - som.offsetWidth * .75) + 'px'; };
+document.fonts.ready.then(placeSom); addEventListener('resize', placeSom);
 if (only) document.querySelectorAll('.vhead, .vb').forEach((el, i) => { if (Math.floor(i / 2) + 1 !== +only) el.style.display = "none"; });
 </script>
 </body>
