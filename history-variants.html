@@ -109,6 +109,48 @@
 .v4 .quote { left: calc(1080 * var(--u)); bottom: calc(80 * var(--u)); width: calc(560 * var(--u)); background: var(--red); color: var(--white); font: 400 calc(30 * var(--u))/1.05 var(--body); text-transform: uppercase; padding: calc(16 * var(--u)) calc(20 * var(--u)); z-index: 3; }
 .v4 .cac { left: calc(1000 * var(--u)); bottom: 0; width: calc(520 * var(--u)); opacity: .45; z-index: 1; }
 .v4 .star { z-index: 3; }
+
+/* общая карта: в файле карта занимает правую половину (x 470–1032 из 1032), левая — пустая */
+.vb .bigmap { z-index: 0; pointer-events: none; }
+
+/* ---------- 5. Карта-постер ---------- */
+.v5 { aspect-ratio: 2000 / 1427; }
+.v5 .bigmap { left: calc(187 * var(--u)); top: calc(-40 * var(--u)); width: calc(1806 * var(--u)); }
+.v5 .ttl, .v6 .ttl, .v7 .ttl { left: calc(100 * var(--u)); top: calc(77 * var(--u)); font-size: calc(222 * var(--u) * var(--k)); white-space: nowrap; z-index: 2; }
+.v5 .som, .v6 .som, .v7 .som { top: calc(10 * var(--u)); width: calc(150 * var(--u)); rotate: 10deg; z-index: 3; }
+.v5 .lead, .v6 .lead, .v7 .lead { left: calc(100 * var(--u)); top: calc(375 * var(--u)); width: calc(780 * var(--u)); font-family: var(--body); font-size: calc(30 * var(--u)); line-height: 1.25; z-index: 2; }
+.v5 .year { left: calc(90 * var(--u)); top: calc(640 * var(--u)); font-size: calc(330 * var(--u) * var(--k)); z-index: 2; }
+.v5 .yearcap { left: calc(100 * var(--u)); top: calc(1010 * var(--u)); width: calc(500 * var(--u)); z-index: 2; }
+.v5 .fig { left: calc(660 * var(--u)); top: calc(880 * var(--u)); width: calc(430 * var(--u)); z-index: 3; filter: drop-shadow(0 calc(24 * var(--u)) calc(24 * var(--u)) rgba(80,40,20,.2)); }
+.v5 .figcap { left: calc(700 * var(--u)); top: calc(1280 * var(--u)); width: calc(420 * var(--u)); z-index: 3; }
+.v5 .flag { left: calc(1560 * var(--u)); top: calc(1010 * var(--u)); width: calc(320 * var(--u)); rotate: 8deg; z-index: 2; }
+.v5 .mar { left: calc(1810 * var(--u)); top: calc(1170 * var(--u)); width: calc(95 * var(--u)); rotate: -14deg; z-index: 2; }
+.v5 .quote, .v6 .quote { background: var(--red); color: var(--white); font: 400 calc(28 * var(--u))/1.05 var(--body); text-transform: uppercase; padding: calc(16 * var(--u)) calc(20 * var(--u)); z-index: 3; }
+.v5 .quote { left: calc(100 * var(--u)); top: calc(1170 * var(--u)); width: calc(500 * var(--u)); }
+
+/* ---------- 6. Лупа на карте ---------- */
+.v6 { aspect-ratio: 2000 / 1427; }
+.v6 .bigmap { left: calc(418 * var(--u)); top: calc(60 * var(--u)); width: calc(1496 * var(--u)); }
+.v6 .lens { left: calc(560 * var(--u)); top: calc(620 * var(--u)); width: calc(560 * var(--u)); height: calc(560 * var(--u)); border-radius: 50%; border: calc(8 * var(--u)) solid var(--red); background: var(--bg) url("assets/map.webp") no-repeat; background-size: calc(1032 * 1.75 * var(--u)) auto; background-position: calc(272 * var(--u) - 778 * 1.75 * var(--u)) calc(272 * var(--u) - 305 * 1.75 * var(--u)); z-index: 3; box-shadow: 0 calc(20 * var(--u)) calc(50 * var(--u)) rgba(80,40,20,.18); }
+.v6 .lens-ln { left: calc(1095 * var(--u)); top: calc(760 * var(--u)); width: calc(330 * var(--u)); height: calc(4 * var(--u)); background: var(--red); rotate: -33deg; transform-origin: 0 0; z-index: 2; }
+.v6 .lens-tag { left: calc(700 * var(--u)); top: calc(1150 * var(--u)); background: var(--red); color: var(--white); padding: calc(10 * var(--u)) calc(18 * var(--u)); z-index: 4; font-size: calc(32 * var(--u) * var(--k)); }
+.v6 .fig { left: calc(100 * var(--u)); top: calc(640 * var(--u)); width: calc(360 * var(--u)); z-index: 2; }
+.v6 .figcap { left: calc(100 * var(--u)); top: calc(960 * var(--u)); width: calc(420 * var(--u)); z-index: 2; }
+.v6 .figcap .d, .v5 .figcap .d { font-size: calc(36 * var(--u) * var(--k)); margin-bottom: calc(12 * var(--u)); }
+.v6 .quote { left: calc(100 * var(--u)); top: calc(1200 * var(--u)); width: calc(470 * var(--u)); }
+
+/* ---------- 7. Маршрут по карте ---------- */
+.v7 { aspect-ratio: 2000 / 1427; }
+.v7 .bigmap { left: calc(345 * var(--u)); top: calc(30 * var(--u)); width: calc(1548 * var(--u)); }
+.v7 .route { left: 0; top: 0; width: 100%; height: 100%; z-index: 1; overflow: visible; }
+.v7 .mk { width: calc(84 * var(--u)); height: calc(84 * var(--u)); translate: -50% -50%; border-radius: 50%; background: var(--red); color: var(--white); display: grid; place-items: center; font: 400 calc(46 * var(--u) * var(--k))/1 var(--display); font-size-adjust: cap-height 1.0325; z-index: 3; box-shadow: 0 0 0 calc(8 * var(--u)) rgba(231,85,61,.25); }
+.v7 .mk-l { z-index: 3; background: var(--white); padding: calc(8 * var(--u)) calc(14 * var(--u)); font-size: calc(28 * var(--u) * var(--k)); box-shadow: 0 calc(6 * var(--u)) calc(16 * var(--u)) rgba(60,30,10,.12); }
+.v7 .steps { left: calc(100 * var(--u)); top: calc(620 * var(--u)); width: calc(800 * var(--u)); display: flex; flex-direction: column; gap: calc(44 * var(--u)); z-index: 2; }
+.v7 .st { display: grid; grid-template-columns: calc(84 * var(--u)) 1fr; gap: calc(28 * var(--u)); align-items: start; }
+.v7 .st .mk { position: static; translate: none; }
+.v7 .st .d { font-size: calc(46 * var(--u) * var(--k)); margin-bottom: calc(12 * var(--u)); }
+.v7 .fig { left: calc(720 * var(--u)); top: calc(360 * var(--u)); width: calc(250 * var(--u)); z-index: 2; rotate: -4deg; }
+.v7 .lead { width: calc(580 * var(--u)); }
 </style>
 </head>
 <body>
@@ -206,6 +248,62 @@
   <svg class="star" style="--x:1000;--y:900;--s:40" aria-hidden="true"><use href="#star"/></svg>
 </section>
 
+<!-- ===================== 5 ===================== -->
+<h2 class="vhead"><b>Вариант 5</b><span>Карта-постер на всю высоту, крупная дата и техичи на краю карты</span></h2>
+<section class="vb v5">
+  <img class="bigmap" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <p class="lead">Задолго до появления современной породы рядом с&nbsp;тольтеками и&nbsp;майя жили маленькие собачки техичи&nbsp;— прямые предки чихуахуа. Потом их переняли ацтеки, а&nbsp;потом собачки надолго пропали из&nbsp;виду.</p>
+  <b class="d year">1850</b>
+  <p class="t yearcap">Год, когда порода снова нашлась на&nbsp;севере Мексики, в&nbsp;штате Чиуауа. Оттуда и&nbsp;её имя.</p>
+  <img class="fig" src="assets/techichi.png" alt="Глиняная фигурка собаки">
+  <div class="figcap"><b class="d">Глиняные собаки</b><p class="t">Фигурки из&nbsp;Западной Мексики, им&nbsp;около 2000 лет</p></div>
+  <img class="flag" src="assets/flag.png" alt="">
+  <img class="mar" src="assets/maracas.png" alt="">
+  <p class="quote">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;связь с&nbsp;человеком</p>
+  <svg class="star" style="--x:1000;--y:560;--s:56" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:620;--y:760;--s:40" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ===================== 6 ===================== -->
+<h2 class="vhead"><b>Вариант 6</b><span>Большая карта и лупа, которая приближает штат Чиуауа</span></h2>
+<section class="vb v6">
+  <img class="bigmap" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <p class="lead">Задолго до появления современной породы рядом с&nbsp;тольтеками и&nbsp;майя жили маленькие собачки техичи&nbsp;— прямые предки чихуахуа. В&nbsp;1850-х их снова нашли на&nbsp;севере Мексики.</p>
+  <img class="fig" src="assets/techichi.png" alt="Глиняная фигурка собаки">
+  <div class="figcap"><b class="d">Техичи</b><p class="t">Тольтеки держали этих собачек в&nbsp;IX–XII веках. Их глиняные фигурки находят до&nbsp;сих пор</p></div>
+  <i class="lens-ln"></i>
+  <div class="lens" role="img" aria-label="Штат Чиуауа крупно"></div>
+  <b class="d lens-tag">Штат Чиуауа · 1850-е</b>
+  <p class="quote">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;связь с&nbsp;человеком</p>
+  <svg class="star" style="--x:1180;--y:600;--s:50" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:520;--y:1150;--s:36" aria-hidden="true"><use href="#star"/></svg>
+</section>
+
+<!-- ===================== 7 ===================== -->
+<h2 class="vhead"><b>Вариант 7</b><span>Большая карта с маршрутом: где жили предки и откуда имя</span></h2>
+<section class="vb v7">
+  <img class="bigmap" src="assets/map.webp" alt="Карта Мексики, штат Чиуауа выделен">
+  <svg class="route" viewBox="0 0 2000 1427" aria-hidden="true"><polyline points="1402,1320 1620,1215 1515,600" fill="none" stroke="#E7553D" stroke-width="6" stroke-dasharray="18 14" stroke-linecap="round"/></svg>
+  <b class="mk" style="left:calc(1402 * var(--u));top:calc(1320 * var(--u))">1</b>
+  <b class="mk" style="left:calc(1620 * var(--u));top:calc(1215 * var(--u))">2</b>
+  <b class="mk" style="left:calc(1515 * var(--u));top:calc(600 * var(--u))">3</b>
+  <b class="d mk-l" style="left:calc(1180 * var(--u));top:calc(1330 * var(--u))">Колима</b>
+  <b class="d mk-l" style="left:calc(1680 * var(--u));top:calc(1150 * var(--u))">Тула</b>
+  <h3 class="d ttl">Древние&nbsp; корни</h3>
+  <img class="som" src="assets/sombrero.png" alt="">
+  <p class="lead">Путь чихуахуа начался в&nbsp;древней Мексике&nbsp;— задолго до того, как у&nbsp;породы появилось имя.</p>
+  <img class="fig" src="assets/techichi.png" alt="Глиняная фигурка собаки">
+  <div class="steps">
+    <div class="st"><b class="mk">1</b><div><b class="d">Колима · 2000 лет назад</b><p class="t">На западе Мексики лепят глиняных собачек&nbsp;— таких находят в&nbsp;древних захоронениях.</p></div></div>
+    <div class="st"><b class="mk">2</b><div><b class="d">Тула · IX–XII век</b><p class="t">Тольтеки держат маленьких техичи&nbsp;— прямых предков чихуахуа. Позже собачки переходят к&nbsp;ацтекам.</p></div></div>
+    <div class="st"><b class="mk">3</b><div><b class="d">Чиуауа · 1850-е</b><p class="t">Породу снова находят на&nbsp;севере Мексики, и&nbsp;она получает имя штата.</p></div></div>
+  </div>
+</section>
+
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="star" viewBox="0 0 100 100"><path d="M50 0C52 34 66 48 100 50 66 52 52 66 50 100 48 66 34 52 0 50 34 48 48 34 50 0Z"/></symbol>
 </svg>
@@ -213,8 +311,11 @@
 /* ?only=2 — показать один вариант (для скриншотов) */
 const only = new URLSearchParams(location.search).get('only');
 /* сомбреро — на последней букве заголовка */
-const ttl = document.querySelector('.v4 .ttl'), som = document.querySelector('.v4 .som');
-const placeSom = () => { const b = ttl.parentElement.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(ttl); const t = r.getBoundingClientRect(); som.style.left = (t.right - b.left - som.offsetWidth * .75) + 'px'; };
+const placeSom = () => document.querySelectorAll('.v4 .som, .v5 .som, .v6 .som, .v7 .som').forEach((som) => {
+  const ttl = som.parentElement.querySelector('.ttl');
+  const b = som.parentElement.getBoundingClientRect(), r = document.createRange(); r.selectNodeContents(ttl); const t = r.getBoundingClientRect();
+  som.style.left = (t.right - b.left - som.offsetWidth * .75) + 'px';
+});
 document.fonts.ready.then(placeSom); addEventListener('resize', placeSom);
 if (only) document.querySelectorAll('.vhead, .vb').forEach((el, i) => { if (Math.floor(i / 2) + 1 !== +only) el.style.display = "none"; });
 </script>
