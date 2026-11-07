@@ -158,6 +158,11 @@ body::after {
           mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%), linear-gradient(transparent, #000 14%);
           mask-composite: intersect;
 }
+/* розовые зернистые цветы по углам обложки */
+.cover__flower { position: absolute; z-index: 0; pointer-events: none; user-select: none; height: auto; max-width: none; }
+.cover__flower--tr { top: 0; right: 0; width: 46%; }
+.cover__flower--bl { bottom: 0; left: 0; width: 62%; }
+.cover__flower--br { bottom: 0; right: 0; width: 56%; opacity: .75; }
 br.dt { display: none; }
 .cl {
   position: relative; z-index: 4;
@@ -380,6 +385,9 @@ br.dt { display: none; }
   .cover__edition { left: calc(104 * var(--m)); top: calc(503 * var(--m)); font-size: calc(31 * var(--m)); }
   .cover__year { right: calc(105 * var(--m)); top: calc(503 * var(--m)); font-size: calc(31 * var(--m)); }
   br.dt { display: inline; }
+  .cover__flower--tr { top: 0; right: 0; width: calc(530 * var(--m)); }
+  .cover__flower--bl { bottom: 0; left: 0; width: calc(680 * var(--m)); }
+  .cover__flower--br { bottom: 0; right: 0; width: calc(620 * var(--m)); }
   .cover__dog {
     aspect-ratio: auto;
     left: calc(460 * var(--m)); top: calc(340 * var(--m));
