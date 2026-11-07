@@ -12,3 +12,8 @@
 - `assets/` — картинки (список имён — в `assets/README.md`) и текстура зерна `grain.png`
 
 Сайт статический: достаточно открыть `index.html` в браузере.
+
+## Шрифты
+- Заголовки: Extenda 40 Hecto и Extenda 70 Peta (пробная версия). Font: Extenda Family by Zetafonts — http://www.zetafonts.com/collection/2651 (лицензия CC BY-NC, только некоммерческое использование).
+- Цифры в заголовках: Anton (Google Fonts), потому что в пробной версии Extenda цифр нет.
+- Основной текст: Igra Sans (Сергей Годовалов).

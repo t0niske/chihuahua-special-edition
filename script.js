@@ -21,8 +21,37 @@ const fitStretched = () => {
     el.style.height = `${el.firstElementChild.offsetHeight * sy}px`;
   });
 };
-document.fonts.ready.then(fitStretched);
-new ResizeObserver(fitStretched).observe(document.body);
+/* CHIHUAHUA на обложке. В макете буквы занимают ~80% строки, остальное — расстояние между ними.
+   На широком экране строка длиннее, поэтому берём более широкое начертание семейства
+   (Extenda 70 Peta вместо 40 Hecto), а недостающее добираем лёгким расширением букв. */
+const titleSvg = document.querySelector('.cover__title svg');
+const titleText = titleSvg.querySelector('text');
+const titleFonts = ['Extenda', 'Extenda Wide'];
+const fitTitle = () => {
+  const r = titleSvg.getBoundingClientRect();
+  const desk = matchMedia('(min-width: 761px)').matches;
+  const w = desk && r.height ? 360 * r.width / r.height : 1795;   // ширина строки в единицах макета
+  const target = w * 0.8;                                          // сколько должны занимать сами буквы
+  titleText.removeAttribute('textLength');
+  titleText.removeAttribute('transform');
+  let best = null;
+  for (const f of titleFonts) {
+    titleText.style.fontFamily = `"${f}", var(--display)`;
+    const n = titleText.getComputedTextLength();
+    if (n > w) continue;                                           // не помещается — не годится
+    const d = Math.abs(Math.log(target / n));
+    if (!best || d < best.d) best = { f, n, d };
+  }
+  if (!best) best = { f: titleFonts[0], n: titleText.getComputedTextLength() };
+  titleText.style.fontFamily = `"${best.f}", var(--display)`;
+  const s = Math.min(1.25, Math.max(1, target / best.n));          // слегка расширить буквы, если надо
+  titleSvg.setAttribute('viewBox', `0 0 ${Math.round(w)} 360`);
+  titleText.setAttribute('transform', `scale(${s.toFixed(3)} 1)`);
+  titleText.setAttribute('textLength', Math.round(w / s));
+};
+const fitAll = () => { fitStretched(); fitTitle(); };
+document.fonts.load('400 100px "Extenda Wide"', 'CHIHUAHUA').then(() => document.fonts.ready).then(fitAll);
+new ResizeObserver(fitAll).observe(document.body);
 
 
 /* 1. Картинки, которых ещё нет в assets/, заменяем заглушкой (или убираем, если data-ph пустой).

@@ -2,16 +2,37 @@
    CHIHUAHUA — Special Edition
    Сетка десктопа повторяет макеты: 1 единица = 1px макета шириной 2000.
    ========================================================= */
+/* Шрифты: Extenda 40 Hecto (Zetafonts, CC BY-NC) — заголовки, цифры в них — Anton; Igra Sans — текст */
+@font-face {
+  font-family: "Extenda";
+  src: url("assets/fonts/Extenda-40-Hecto-trial.ttf") format("truetype");
+  font-weight: 100 900;     /* одно начертание: браузер не дорисовывает «жирность» */
+  unicode-range: U+0000-002F, U+003A-10FFFF;   /* в пробной версии нет цифр — они берутся из Anton */
+  font-display: swap;
+}
+@font-face {
+  font-family: "Extenda Wide";   /* Extenda 70 Peta — для CHIHUAHUA на широких экранах */
+  src: url("assets/fonts/Extenda-80-Peta-trial.ttf") format("truetype");
+  font-weight: 100 900;
+  unicode-range: U+0041-005A;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Igra Sans";
+  src: url("assets/fonts/IgraSans.otf") format("opentype");
+  font-weight: 400;
+  font-display: swap;
+}
 :root {
   --bg: #FFFEF0;          /* под зерном читается как #F7F5E8 из макетов */
   --red: #E7553D;
   --ink: #2B2B2B;
   --peach: #F1D2BC;
   --white: #FFFDF6;
-  --sy: 1.75;              /* заголовки в макетах вытянуты по вертикали */
-  --k: .9685;              /* = 1 / (0.59 * --sy): размер шрифта из высоты прописной */
-  --display: "Alumni Sans", "Oswald", "Arial Narrow", sans-serif;
-  --body: "Montserrat", system-ui, sans-serif;
+  --sy: 1;                 /* Extenda уже узкий и высокий — растягивать не нужно */
+  --k: .9685;              /* размер шрифта из высоты прописной: прописная = 1.0325 × размер (font-size-adjust) */
+  --display: "Extenda", "Anton", "Arial Narrow", sans-serif;
+  --body: "Igra Sans", system-ui, sans-serif;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -45,9 +66,10 @@ body::after {
 /* ---------- общие элементы ---------- */
 .d {
   font-family: var(--display);
-  font-weight: 800;
+  font-weight: 400;
+  font-size-adjust: cap-height 1.0325;
   text-transform: uppercase;
-  line-height: .72;
+  line-height: 1.26;
   letter-spacing: 0;
   text-box: trim-both cap alphabetic;
 }
@@ -115,7 +137,7 @@ body::after {
   transition: transform .35s ease;
 }
 .minibar.is-on { transform: none; }
-.minibar__logo { font: 26px/1 "Anton", sans-serif; color: var(--red); text-decoration: none; letter-spacing: .02em; }
+.minibar__logo { font: 30px/1 var(--display); font-size-adjust: cap-height .72; color: var(--red); text-decoration: none; letter-spacing: .02em; }
 .minibar__nav { display: flex; gap: 20px; overflow-x: auto; scrollbar-width: none; }
 .minibar__nav a { text-decoration: none; font-size: 14px; white-space: nowrap; }
 .minibar__nav a:hover { color: var(--red); }
@@ -143,7 +165,7 @@ body::after {
 
 .cover__title { grid-column: 1 / -1; position: relative; z-index: 3; }
 .cover__title svg, .footer__logo { display: block; width: 100%; height: auto; overflow: visible; }
-.cover__title text, .footer__logo text { font-family: "Anton", sans-serif; font-size: 419px; fill: var(--red); }
+.cover__title text, .footer__logo text { font-family: var(--display); font-size: 542px; fill: var(--red); }   /* прописная = 360 */
 
 .cover__edition, .cover__year { font-size: 13px; margin-top: 6px; position: relative; z-index: 3; }
 .cover__year { text-align: right; }
@@ -347,6 +369,8 @@ br.dt { display: none; }
 .footer__row nav { display: flex; flex-wrap: wrap; gap: 8px 18px; }
 .footer__row a { text-decoration: none; }
 .footer__row a:hover { color: var(--red); }
+.footer__credit { font-size: 12px; opacity: .6; }
+.footer__credit a { text-decoration: underline; }
 .barcode--footer { color: var(--ink); width: 200px; }
 
 /* появление при прокрутке */
@@ -420,7 +444,7 @@ br.dt { display: none; }
   .cl--boss { left: calc(102 * var(--mx)); top: calc(1015 * var(--m) - 110 * (var(--t) - var(--m))); }
   /* нижняя строка и штрих-код стоят на одной линии снизу */
   .cl--model { left: calc(102 * var(--mx)); top: auto; bottom: calc(40 * var(--m)); }
-  .cl--model b.d { font-size: calc(64 * var(--t) * var(--k)); line-height: .73; }
+  .cl--model b.d { font-size: calc(64 * var(--t) * var(--k)); line-height: 1.28; }
   .cl--energy { right: calc(105 * var(--mx)); top: calc(782 * var(--m) - 120 * (var(--t) - var(--m))); }
   .cl--ways { right: calc(105 * var(--mx)); top: auto; bottom: calc(243 * var(--m) + 60 * var(--t)); }   /* растёт вверх, не наезжая на плашку */
   .cl--size { right: calc(105 * var(--mx)); top: auto; bottom: calc(229 * var(--m)); }
@@ -500,8 +524,8 @@ br.dt { display: none; }
   .look__title { display: block; padding: 0; inset: 0; pointer-events: none; z-index: 4; }
   .look__t1, .look__t2 { position: absolute; font-size: calc(218 * var(--m) * var(--k)); }
   .look__t1 { left: calc(103 * var(--mx)); top: calc(65 * var(--m)); }
-  .look__t2 { left: calc(103 * var(--mx) + 599 * var(--m)); top: calc(152 * var(--m)); }
-  .look__glasses-mini { display: block; left: calc(103 * var(--mx) + 1022 * var(--m)); top: calc(165 * var(--m)); width: calc(112 * var(--m)); rotate: 8deg; z-index: 5; }
+  .look__t2 { left: calc(103 * var(--mx) + 650 * var(--m)); top: calc(152 * var(--m)); }
+  .look__glasses-mini { display: block; left: calc(103 * var(--mx) + 1073 * var(--m)); top: calc(165 * var(--m)); width: calc(112 * var(--m)); rotate: 8deg; z-index: 5; }
   .look__item { display: block; left: calc(var(--x) * var(--mx)); top: calc(var(--y) * var(--m)); width: calc(var(--w) * var(--m)); rotate: var(--r, 0deg); z-index: 3; transition: transform .3s ease; }
   .look__item:hover { transform: rotate(-6deg) scale(1.06); }
   .look .star { display: block; }
