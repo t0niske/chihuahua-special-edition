@@ -504,7 +504,7 @@ br.dt { display: none; }
   .history__pol figcaption { margin-top: calc(18 * var(--m)); font-size: calc(27 * var(--t)); }
   .history__maracas { display: block; left: calc(735 * var(--mx) + 350 * var(--m)); top: calc(625 * var(--m)); width: calc(120 * var(--m)); rotate: 22deg; z-index: 4; }
   .history__flag { left: auto; right: calc(80 * var(--mx)); top: calc(110 * var(--m)); width: calc(280 * var(--m)); rotate: 8deg; z-index: 2; }
-  .history__map { right: calc(70 * var(--mx)); top: calc(60 * var(--m)); width: calc(1451 * var(--m)); margin: 0; z-index: 1; pointer-events: none; }
+  .history__map { right: calc(20 * var(--mx)); top: calc(10 * var(--m)); width: calc(1720 * var(--m)); margin: 0; z-index: 1; pointer-events: none; }
   .history__map img { width: 100%; margin: 0; }
   .history__map .ph { width: calc(785 * var(--m)); height: calc(1400 * var(--m)); margin-left: auto; }
   .history__cactus { left: calc(-40 * var(--m)); bottom: 0; width: calc(900 * var(--m)); z-index: 0; }
