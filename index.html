@@ -8,7 +8,7 @@
 <link rel="preload" href="assets/fonts/Extenda-40-Hecto-trial.ttf" as="font" type="font/ttf" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&text=0123456789&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=15">
+<link rel="stylesheet" href="styles.css?v=16">
 </head>
 <body>
 
@@ -71,26 +71,31 @@
 
 <!-- ============ ИСТОРИЯ ============ -->
 <section class="history board" id="history" aria-labelledby="history-title">
-  <h2 class="history__title d" id="history-title">Древние&nbsp; корни</h2>
-  <img class="asset history__sombrero" src="assets/sombrero.png" data-ph="" alt="">
-
-  <p class="history__p1 txt reveal">Задолго до появления современной породы рядом с&nbsp;народами тольтеков и&nbsp;майя жили маленькие собачки техичи&nbsp;— именно они считаются прямыми предками чихуахуа</p>
-  <img class="asset history__figure reveal" src="assets/techichi.png" data-ph="фигурка техичи" alt="Древняя глиняная фигурка собаки">
-  <img class="asset history__flag reveal" src="assets/flag.png" data-ph="флаг Мексики" alt="Флаг Мексики">
-  <img class="asset history__maracas" src="assets/maracas.png" data-ph="" alt="">
-  <p class="history__p2 txt reveal">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;врождённая связь с&nbsp;человеком</p>
-
-  <div class="history__xix reveal">
-    <h3 class="d">В XIX веке...</h3>
-    <p class="txt">Породу вновь открыли в&nbsp;мексиканском штате Чиуауа, откуда началось её стремительное покорение мира.</p>
-  </div>
-
-  <img class="asset history__cactus" src="assets/cactus.png" data-ph="" alt="">
-  <img class="asset history__cactus history__cactus--2" src="assets/cactus-2.png" data-ph="" alt="">
+  <img class="asset history__cactus" src="assets/cactus-pale.webp" data-ph="" alt="">
   <figure class="history__map">
     <img class="asset" src="assets/map.webp" data-ph="карта Мексики со штатом Чиуауа" alt="Карта Мексики, штат Чиуауа выделен красным">
   </figure>
-  <p class="history__quote reveal">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и связь с человеком</p>
+  <h2 class="history__title d" id="history-title">Древние&nbsp; корни</h2>
+  <img class="asset history__sombrero" src="assets/sombrero.png" data-ph="" alt="">
+  <p class="history__sub d reveal">Предки чихуахуа жили<br class="dt"> здесь тысячу лет назад</p>
+
+  <div class="history__col">
+    <ol class="history__events reveal">
+      <li><b class="history__date">IX–XII век</b><p class="txt">Рядом с&nbsp;тольтеками и&nbsp;майя живут маленькие собачки техичи&nbsp;— прямые предки чихуахуа.</p></li>
+      <li><b class="history__date">XIV–XVI век</b><p class="txt">Собачек переняли ацтеки, а&nbsp;потом техичи надолго пропали из&nbsp;виду.</p></li>
+      <li><b class="history__date">1850-е</b><p class="txt">Породу снова находят на&nbsp;севере Мексики, в&nbsp;штате Чиуауа. Оттуда и&nbsp;её имя.</p></li>
+    </ol>
+    <p class="history__quote reveal">В их характере до сих пор чувствуется древняя сила: проницательность, смелость и&nbsp;связь с&nbsp;человеком</p>
+  </div>
+
+  <figure class="history__pol reveal">
+    <div class="history__photo"><img class="asset" src="assets/techichi.png" data-ph="фигурка техичи" alt="Техичи — древняя фигурка собаки"></div>
+    <figcaption class="txt"><b>Техичи.</b> Примерно так выглядели предки чихуахуа</figcaption>
+  </figure>
+  <img class="asset history__maracas" src="assets/maracas.png" data-ph="" alt="">
+  <img class="asset history__flag" src="assets/flag.png" data-ph="" alt="">
+  <svg class="star" style="--x:660;--y:1210;--s:46" aria-hidden="true"><use href="#star"/></svg>
+  <svg class="star" style="--x:1540;--y:1420;--s:40" aria-hidden="true"><use href="#star"/></svg>
 </section>
 
 <!-- ============ ХАРАКТЕР ============ -->
@@ -233,6 +238,6 @@
   <symbol id="star" viewBox="0 0 100 100"><path d="M50 0C52 34 66 48 100 50 66 52 52 66 50 100 48 66 34 52 0 50 34 48 48 34 50 0Z"/></symbol>
 </svg>
 
-<script src="script.js?v=15"></script>
+<script src="script.js?v=16"></script>
 </body>
 </html>
